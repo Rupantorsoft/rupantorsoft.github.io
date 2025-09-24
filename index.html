@@ -1,1 +1,262 @@
-<h2>Welcome!</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupantorsoft - Your Partner in Software Solutions</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles can be added here if needed */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #111827; /* Dark background for hero */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                Rupantorsoft
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
+                <a href="#work" class="text-gray-600 hover:text-indigo-600 transition duration-300">Our Work</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <a href="#contact" class="hidden md:block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+                Get a Quote
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block text-gray-600 hover:text-indigo-600">Home</a>
+            <a href="#about" class="block text-gray-600 hover:text-indigo-600">About Us</a>
+            <a href="#services" class="block text-gray-600 hover:text-indigo-600">Services</a>
+            <a href="#work" class="block text-gray-600 hover:text-indigo-600">Our Work</a>
+            <a href="#contact" class="block text-gray-600 hover:text-indigo-600">Contact</a>
+             <a href="#contact" class="block bg-indigo-600 text-white text-center mt-2 px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+                Get a Quote
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Building the Future, One Line of Code at a Time.</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We specialize in creating modern, high-performance web and mobile applications that drive business growth and user engagement.</p>
+                <a href="#services" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300">Our Services</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Our+Team" alt="Our Team" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Who We Are</h2>
+                        <p class="text-gray-600 mb-4">
+                            Rupantorsoft is a passionate team of developers, designers, and strategists dedicated to delivering exceptional software solutions. We believe in the power of technology to solve complex problems and create meaningful experiences.
+                        </p>
+                        <p class="text-gray-600">
+                            Our mission is to empower businesses by providing them with the tools they need to succeed in the digital landscape. We pride ourselves on our collaborative approach, transparent communication, and commitment to quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Core Services</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We offer a wide range of services to help you achieve your business goals.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                        <p class="text-gray-600">Custom websites and web applications built with the latest technologies.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                             <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Mobile App Dev</h3>
+                        <p class="text-gray-600">Native and cross-platform mobile apps for iOS and Android.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                        <p class="text-gray-600">Intuitive and beautiful user interfaces that users love.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Cloud Solutions</h3>
+                        <p class="text-gray-600">Scalable and secure cloud infrastructure and deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Work Section -->
+        <section id="work" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Recent Work</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">A glimpse into some of the projects we are proud of.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=Project+Alpha" alt="Project Alpha" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Alpha</h3>
+                            <p class="text-gray-600">A comprehensive e-commerce platform with advanced analytics.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/A5B4FC/3730A3?text=Project+Beta" alt="Project Beta" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Beta</h3>
+                            <p class="text-gray-600">A mobile application for a leading fitness brand.</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="rounded-lg shadow-lg overflow-hidden group">
+                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Project+Gamma" alt="Project Gamma" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Gamma</h3>
+                            <p class="text-gray-600">A corporate website redesign for a global tech company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Get In Touch</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Have a project in mind? We'd love to hear from you.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Name">
+                            </div>
+                             <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                             <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                             <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Rupantorsoft</h3>
+                    <p class="text-gray-400">Crafting digital experiences that matter.</p>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#work" class="text-gray-400 hover:text-white">Work</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h3 class="text-lg font-semibold mb-2">Connect With Us</h3>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                         <a href="#" class="text-gray-400 hover:text-white">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-3.096 0 1.548 1.548 0 013.096 0zM6.57 8.125H3.437v8.59h3.133v-8.59z" clip-rule="evenodd" /></svg>
+                        </a>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                &copy; <span id="year"></span> Rupantorsoft. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
