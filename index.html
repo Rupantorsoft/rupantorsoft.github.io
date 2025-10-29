@@ -1,305 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupantorsoft - Innovative Digital Solutions & Technology</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-color: #111827; /* Dark background for hero */
-        }
-    </style>
+    <title>Rupantorsoft - আপনার আইডিয়াকে বাস্তবে রূপ দিন</title>
+    <!-- 
+      লক্ষ্য করুন: CSS ফাইলটি এখন '/style.css' নয়, বরং './style.css'
+      এটি GitHub Pages-এ সঠিকভাবে কাজ করতে সাহায্য করবে।
+    -->
+    <link href="./style.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">
-                Rupantor<span class="text-indigo-600">Soft</span>
-            </a>
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
-                <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
-                <a href="#work" class="text-gray-600 hover:text-indigo-600 transition duration-300">Case Studies</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
-            </div>
-            <a href="#contact" class="hidden md:block bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 font-medium">
-                Get a Quote
-            </a>
-            <button id="mobile-menu-button" class="md:hidden p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+            <div class="text-2xl font-bold text-blue-600">Rupantorsoft</div>
+            <a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-full hover:bg-blue-700 transition duration-300">ফ্রি কনসালটেশন</a>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
-            <a href="#home" class="block text-gray-600 hover:text-indigo-600">Home</a>
-            <a href="#about" class="block text-gray-600 hover:text-indigo-600">About Us</a>
-            <a href="#services" class="block text-gray-600 hover:text-indigo-600">Services</a>
-            <a href="#work" class="block text-gray-600 hover:text-indigo-600">Case Studies</a>
-            <a href="#contact" class="block text-gray-600 hover:text-indigo-600">Contact</a>
-            <a href="#contact" class="block bg-indigo-600 text-white text-center mt-2 px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
-                Get a Quote
-            </a>
-        </div>
     </header>
 
     <main>
-
-        <section id="home" class="hero-bg text-white py-20 md:py-32">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Transforming Ideas into Digital Excellence</h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We build high-performance web and mobile applications that deliver measurable results and a competitive edge for your business.</p>
-                <div class="flex justify-center gap-4">
-                    <a href="#contact" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300">Start Your Project</a>
-                    <a href="#work" class="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-600 transition duration-300">View Our Work</a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="clients" class="py-12 bg-gray-100">
-            <div class="container mx-auto px-6 text-center">
-                 <h3 class="text-sm font-bold uppercase text-gray-500 tracking-widest mb-6">Trusted By Leading Companies</h3>
-                 <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-                     <img src="https://logo.clearbit.com/google.com" alt="Client Logo 1" class="h-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
-                     <img src="https://logo.clearbit.com/microsoft.com" alt="Client Logo 2" class="h-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
-                     <img src="https://logo.clearbit.com/spotify.com" alt="Client Logo 3" class="h-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
-                     <img src="https://logo.clearbit.com/notion.so" alt="Client Logo 4" class="h-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
-                     <img src="https://logo.clearbit.com/slack.com" alt="Client Logo 5" class="h-8 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all">
-                 </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-16 md:py-24 bg-white">
+        <!-- সেকশন ১: হিরো -->
+        <section class="bg-blue-50 py-20 text-center">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <img src="https://placehold.co/600x450/E2E8F0/4A5568?text=Our+Collaborative+Process" alt="Our Team" class="rounded-lg shadow-lg w-full">
-                    </div>
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Your Partner in Innovation</h2>
-                        <p class="text-gray-600 mb-4 text-lg">
-                            Rupantorsoft is more than just a software company—we are your dedicated technology partner. Our team of expert developers, designers, and strategists is committed to turning your vision into a reality. We thrive on solving complex challenges with elegant, user-centric solutions.
-                        </p>
-                        <p class="text-gray-600">
-                            Our mission is to empower businesses with transformative digital tools. We build lasting relationships through a collaborative process, transparent communication, and an unwavering commitment to quality and your success.
-                        </p>
-                    </div>
-                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">আপনার বিজনেস আইডিয়াটি কি টেকনোলজির অভাবে আটকে আছে?</h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">চাকরি না ছেড়েই, বিশাল খরচ ছাড়াই আপনার অ্যাপ বা ওয়েবসাইট লঞ্চ করুন। Rupantorsoft আপনার টেকনিক্যাল পার্টনার হতে প্রস্তুত।</p>
+                <a href="#contact" class="bg-blue-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300">আজই ফ্রি কনসালটেশন নিন</a>
             </div>
         </section>
 
-        <section id="services" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Core Services</h2>
-                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">We provide end-to-end solutions to build and scale your digital products.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-                        <p class="text-gray-600">Secure, scalable, and high-performance websites and web applications tailored to your business needs.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Mobile App Dev</h3>
-                        <p class="text-gray-600">Engaging native and cross-platform mobile apps for iOS and Android that connect with your users.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
-                        <p class="text-gray-600">Creating intuitive, beautiful, and user-centric designs that offer a seamless user experience.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                        <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                             <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2">Digital Strategy</h3>
-                        <p class="text-gray-600">Data-driven SEO and marketing strategies to boost your online presence and drive conversions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Case Studies</h2>
-                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">See how we've helped our clients achieve their goals with our solutions.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/93C5FD/1E3A8A?text=E-commerce+Platform" alt="Project Alpha" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="p-6">
-                            <p class="text-indigo-600 text-sm font-semibold mb-1">E-COMMERCE</p>
-                            <h3 class="text-xl font-semibold mb-2">RetailRevamp E-commerce</h3>
-                            <p class="text-gray-600">Developed a comprehensive platform that led to a 40% increase in online sales for the client.</p>
-                        </div>
-                    </div>
-                    <div class="rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/A5B4FC/3730A3?text=Mobile+Fitness+App" alt="Project Beta" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="p-6">
-                            <p class="text-indigo-600 text-sm font-semibold mb-1">MOBILE APP</p>
-                            <h3 class="text-xl font-semibold mb-2">FitLife Mobile App</h3>
-                            <p class="text-gray-600">Designed and launched an iOS & Android app, achieving 100k+ downloads in the first six months.</p>
-                        </div>
-                    </div>
-                    <div class="rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=SaaS+Dashboard" alt="Project Gamma" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="p-6">
-                            <p class="text-indigo-600 text-sm font-semibold mb-1">SAAS & UI/UX</p>
-                            <h3 class="text-xl font-semibold mb-2">DataSphere Analytics UI</h3>
-                            <p class="text-gray-600">Redesigned a complex SaaS dashboard, improving user task completion rate by 60%.</p>
-                        </div>
-                    </div>
-                    <div class="rounded-lg shadow-lg overflow-hidden group">
-                        <img src="https://placehold.co/600x400/F472B6/4A044E?text=Chouronggo+Marketing" alt="Chouronggo Fashion Brand Digital Marketing Case Study" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="p-6">
-                            <p class="text-indigo-600 text-sm font-semibold mb-1">DIGITAL MARKETING</p>
-                            <h3 class="text-xl font-semibold mb-2">চৌরঙ্গ - Chouronggo</h3>
-                            <p class="text-gray-600">Executed a comprehensive digital marketing campaign, boosting online visibility and increasing sales conversions by 120%.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Let's Build Something Great</h2>
-                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Have a project in mind or just want to learn more? We'd love to hear from you.</p>
-                </div>
-                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 bg-white p-8 md:p-12 rounded-lg shadow-lg">
-                    <form>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Your Name" required>
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="your.email@example.com" required>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Tell us about your project..." required></textarea>
-                        </div>
-                        <div class="text-left">
-                            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition duration-300">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-800">Contact Information</h3>
-                            <p class="text-gray-600">Reach out to us directly through the channels below.</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="bg-indigo-100 p-3 rounded-full">
-                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Email</h4>
-                                <a href="mailto:rupantorsoftltd@gmail.com" class="text-indigo-600">rupantorsoftltd@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="bg-indigo-100 p-3 rounded-full">
-                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">Phone</h4>
-                                <a href="tel:+8801940504011" class="text-indigo-600">+880 1940 504011</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                             <div class="bg-indigo-100 p-3 rounded-full">
-                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                             </div>
-                            <div>
-                                 <h4 class="font-semibold">Office</h4>
-                                 <p class="text-gray-600">Singra, Natore, Rajshahi, Bangladesh</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <h3 class="text-xl font-bold mb-2">Rupantor<span class="text-indigo-400">Soft</span></h3>
-                    <p class="text-gray-400 max-w-sm">Crafting innovative digital experiences to empower businesses and drive growth.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li><a href="#work" class="text-gray-400 hover:text-white">Work</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+        <!-- সেকশন ২: ভয় বনাম সমাধান -->
+        <section class="container mx-auto px-6 py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">"আইডিয়া তো আছে, কিন্তু ভয় পাচ্ছেন?"</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-red-50 border border-red-200 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold mb-6 text-red-800">সাধারণ ভয়গুলো:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "অ্যাপ/ওয়েবসাইট বানাতে লাখ লাখ টাকা লাগবে।"</li>
+                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "বানাতে ৬ মাসের বেশি সময় লেগে যাবে।"</li>
+                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "আমি তো কোডিং বা টেকনিক্যাল কিছুই জানি না।"</li>
+                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "চাকরি ছেড়ে এত বড় ঝুঁকি কিভাবে নেবো?"</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-2">Connect With Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/RupantorSoft" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="Facebook">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                        </a>
-                        <a href="https://github.com/Rupantorsoft/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="GitHub">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.164 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.578.688.48A10.005 10.005 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/rupantorsoft" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
+                <div class="bg-green-50 border border-green-200 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold mb-6 text-green-800">Rupantorsoft-এর সমাধান (MVP):</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **সাশ্রয়ী MVP:** আমরা ন্যূনতম খরচে কাজ শুরু করি আইডিয়া পরীক্ষার জন্য।</li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **দ্রুত লঞ্চ:** ৬ মাস নয়, আমরা মাত্র কয়েক সপ্তাহের মধ্যে 'ফার্স্ট ভার্সন' লঞ্চ করি।</li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **আমরাই আপনার টেক টিম:** আপনার কোনো টেকনিক্যাল জ্ঞানের দরকার নেই।</li>
+                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **ঝুঁকিমুক্ত সাইড-বিজনেস:** আপনাকে চাকরি ছাড়তে হবে না।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- সেকশন ৩: সার্ভিসেস -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">আপনার আইডিয়ার জন্য সঠিক সল্যুশন</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">MVP ডেভেলপমেন্ট</h3>
+                        <p>দ্রুত ও কম খরচে আপনার আইডিয়াটি পরীক্ষা করার জন্য পারফেক্ট। বাজারে আপনার আইডিয়ার চাহিদা কেমন তা যাচাই করুন।</p>
+                    </div>
+                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">কাস্টম ওয়েব ও মোবাইল অ্যাপ</h3>
+                        <p>আপনার ইউনিক বিজনেসের জন্য সম্পূর্ণ কাস্টমাইজড সফটওয়্যার, ই-কমার্স বা মোবাইল অ্যাপ্লিকেশন (অ্যান্ড্রয়েড ও iOS)।</p>
+                    </div>
+                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">টেকনিক্যাল কনসালটেন্সি</h3>
+                        <p>আপনার আইডিয়াটি টেকনিক্যালি কতটা সম্ভব বা কিভাবে করলে ভালো হবে, তা জানতে আমাদের এক্সপার্টদের সাথে কথা বলুন।</p>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-                © <span id="year"></span> Rupantorsoft. All rights reserved.
+        </section>
+
+        <!-- সেকশন ৪: প্রসেস -->
+        <section class="container mx-auto px-6 py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">শূন্য থেকে লঞ্চিং: আমাদের সহজ ৪টি ধাপ</h2>
+            <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+                <div class="text-center flex-1">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">১</div>
+                    <h3 class="text-xl font-semibold mb-2">আইডিয়া ও প্ল্যানিং</h3>
+                    <p>আপনি আপনার আইডিয়াটি বলবেন। আমরা একসাথে বসে এর একটি পরিষ্কার রোডম্যাপ তৈরি করবো।</p>
+                </div>
+                <div class="text-center flex-1">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">২</div>
+                    <h3 class="text-xl font-semibold mb-2">ডিজাইন ও প্রোটোটাইপ</h3>
+                    <p>আপনার অ্যাপ বা ওয়েবসাইট দেখতে কেমন হবে, তার একটি ডিজাইন (UI/UX) আমরা আপনাকে দেখাবো।</p>
+                </div>
+                <div class="text-center flex-1">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">৩</div>
+                    <h3 class="text-xl font-semibold mb-2">ডেভেলপমেন্ট</h3>
+                    <p>আমাদের এক্সপার্ট ডেভেলপাররা কোডিং শুরু করবে এবং আপনি নিয়মিত কাজের আপডেট পেতে থাকবেন।</p>
+                </div>
+                <div class="text-center flex-1">
+                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">৪</div>
+                    <h3 class="text-xl font-semibold mb-2">লঞ্চ ও সাপোর্ট</h3>
+                    <p>আপনার বিজনেস এখন লাইভ! আমরা লঞ্চ করার পরেও আপনাকে পূর্ণাঙ্গ সাপোর্ট দিয়ে যাবো।</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- সেকশন ৫: কনট্যাক্ট ও ফর্ম -->
+        <section id="contact" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center mb-12">
+                        <p class="text-xl italic text-gray-700">"Rupantorsoft-এর আগে আমি ভেবেছিলাম অ্যাপ বানানো খুব জটিল। তারা চাকরি না ছেড়েই আমার সাইড-বিজনেসটি মাত্র ৫ সপ্তাহে লঞ্চ করতে সাহায্য করেছে।"</p>
+                        <p class="mt-4 font-semibold text-blue-600">- একজন সন্তুষ্ট গ্রাহক</p>
+                    </div>
+
+                    <div class="bg-white p-10 rounded-lg shadow-xl">
+                        <h2 class="text-3xl font-bold text-center mb-6">আপনার আইডিয়াকে আর ফেলে রাখবেন না</h2>
+                        <p class="text-center text-lg text-gray-700 mb-8">আপনার আইডিয়াটি কিভাবে, কত খরচে এবং কত সময়ে লঞ্চ করা সম্ভব তা জানতে আজই ফর্মটি পূরণ করুন।</p>
+                        
+                        <!-- 
+                          গুরুত্বপূর্ণ পরিবর্তন: 
+                          1. "action" পরিবর্তিত হয়েছে Formspree-এর URL দিয়ে।
+                          2. "method" POST রয়েছে।
+                          আপনাকে https://formspree.io/ -তে গিয়ে একটি অ্যাকাউন্ট খুলে 
+                          "YOUR_UNIQUE_ID" টি পরিবর্তন করতে হবে।
+                        -->
+                        <form action="https://formspree.io/f/xeopkvdp" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">আপনার নাম:</label>
+                                <input type="text" id="name" name="name" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <!-- 
+                                  Formspree-তে ইমেইল ফিল্ডের 'name' অ্যাট্রিবিউট "email"
+                                  হিসেবে রাখা ভালো, অথবা Formspree সেটিংসে গিয়ে এটি সেট করুন।
+                                -->
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">আপনার ইমেইল:</label>
+                                <input type="email" id="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="idea" class="block text-sm font-medium text-gray-700 mb-1">আপনার আইডিয়া (সংক্ষেপে):</label>
+                                <textarea id="idea" name="idea" rows="4" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="bg-blue-600 text-white py-3 px-10 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300">আমার ফ্রি কনসালটেশন বুক করুন</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>&copy; ২০২৫ Rupantorsoft. সর্বসত্ত্ব সংরক্ষিত।</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Set current year in footer
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 </html>
