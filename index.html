@@ -1,126 +1,217 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="bn" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rupantorsoft - আপনার আইডিয়াকে বাস্তবে রূপ দিন</title>
-    <link href="/style.css" rel="stylesheet">
+    
+    <!-- CSS ফাইলটি মূল ফোল্ডার থেকে লোড হচ্ছে -->
+    <link href="./style.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* ডার্ক মোডে স্ক্রলবার স্টাইল করার জন্য (ঐচ্ছিক) */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827; /* bg-gray-900 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #374151; /* bg-gray-700 */
+            border-radius: 6px;
+            border: 3px solid #111827;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-900 text-gray-200"> <!-- ডার্ক মোড ব্যাকগ্রাউন্ড -->
 
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-600">Rupantorsoft</div>
-            <a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-full hover:bg-blue-700 transition duration-300">ফ্রি কনসালটেশন</a>
+    
+    <!-- ন্যাভবার: ডার্ক মোড -->
+    <header class="sticky top-0 z-50 bg-gray-950/90 backdrop-blur-sm shadow-lg shadow-blue-500/10 transition-all duration-300">
+        <!-- ন্যাভবারের প্যাডিং py-3 থেকে py-2 করা হয়েছে -->
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            
+            <!-- নতুন লোগো -->
+            <a href="#" class="flex items-center space-x-2">
+                <!-- লোগোর উচ্চতা h-8 থেকে h-6 করা হয়েছে -->
+                <img src="./rupantorsoft_logo.png" alt="Rupantorsoft Logo" class="h-6 w-auto"> 
+            </a>
+            
+            <a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-full hover:bg-blue-700 transition duration-300 font-semibold shadow-sm hover:shadow-lg">ফ্রি কনসালটেশন</a>
         </nav>
     </header>
 
     <main>
-        <section class="bg-blue-50 py-20 text-center">
+        
+        <!-- সেকশন ১: হিরো (ডার্ক মোড) -->
+        <section class="bg-gradient-to-br from-gray-900 to-blue-950 py-24 text-center"> <!-- ডার্ক গ্রাডিয়েন্ট -->
             <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">আপনার বিজনেস আইডিয়াটি কি টেকনোলজির অভাবে আটকে আছে?</h1>
-                <p class="text-lg md:text-xl text-gray-700 mb-8">চাকরি না ছেড়েই, বিশাল খরচ ছাড়াই আপনার অ্যাপ বা ওয়েবসাইট লঞ্চ করুন। Rupantorsoft আপনার টেকনিক্যাল পার্টনার হতে প্রস্তুত।</p>
-                <a href="#contact" class="bg-blue-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300">আজই ফ্রি কনসালটেশন নিন</a>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 text-white">আপনার আইডিয়াকে বাস্তবে রূপ দিন</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">চাকরি না ছেড়েই, বিশাল খরচ ছাড়াই আপনার অ্যাপ বা ওয়েবসাইট লঞ্চ করুন। Rupantorsoft আপনার টেকনিক্যাল পার্টনার হতে প্রস্তুত।</p>
+                <a href="#contact" class="bg-blue-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">আজই ফ্রি কনসালটেশন নিন</a>
             </div>
         </section>
 
-        <section class="container mx-auto px-6 py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">"আইডিয়া তো আছে, কিন্তু ভয় পাচ্ছেন?"</h2>
+        
+        <!-- সেকশন ২: ভয় বনাম সমাধান (ডার্ক মোড) -->
+        <section class="container mx-auto px-6 py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">"আইডিয়া তো আছে, কিন্তু ভয় পাচ্ছেন?"</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-red-50 border border-red-200 p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-6 text-red-800">সাধারণ ভয়গুলো:</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "অ্যাপ/ওয়েবসাইট বানাতে লাখ লাখ টাকা লাগবে।"</li>
-                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "বানাতে ৬ মাসের বেশি সময় লেগে যাবে।"</li>
-                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "আমি তো কোডিং বা টেকনিক্যাল কিছুই জানি না।"</li>
-                        <li class="flex items-start"><span class="text-red-500 font-bold text-xl mr-3">❌</span> "চাকরি ছেড়ে এত বড় ঝুঁকি কিভাবে নেবো?"</li>
+                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-lg"> <!-- ডার্ক কার্ড -->
+                    <h3 class="text-2xl font-semibold mb-6 text-red-400">সাধারণ ভয়গুলো:</h3> <!-- হাইলাইটেড টেক্সট -->
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "অ্যাপ/ওয়েবসাইট বানাতে লাখ লাখ টাকা লাগবে।"</li>
+                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "বানাতে ৬ মাসের বেশি সময় লেগে যাবে।"</li>
+                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "আমি তো কোডিং বা টেকনিক্যাল কিছুই জানি না।"</li>
+                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "চাকরি ছেড়ে এত বড় ঝুঁকি কিভাবে নেবো?"</li>
                     </ul>
                 </div>
-                <div class="bg-green-50 border border-green-200 p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-semibold mb-6 text-green-800">Rupantorsoft-এর সমাধান (MVP):</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **সাশ্রয়ী MVP:** আমরা ন্যূনতম খরচে কাজ শুরু করি আইডিয়া পরীক্ষার জন্য।</li>
-                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **দ্রুত লঞ্চ:** ৬ মাস নয়, আমরা মাত্র কয়েক সপ্তাহের মধ্যে 'ফার্স্ট ভার্সন' লঞ্চ করি।</li>
-                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **আমরাই আপনার টেক টিম:** আপনার কোনো টেকনিক্যাল জ্ঞানের দরকার নেই।</li>
-                        <li class="flex items-start"><span class="text-green-500 font-bold text-xl mr-3">✅</span> **ঝুঁকিমুক্ত সাইড-বিজনেস:** আপনাকে চাকরি ছাড়তে হবে না।</li>
+                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-lg"> <!-- ডার্ক কার্ড -->
+                    <h3 class="text-2xl font-semibold mb-6 text-green-400">Rupantorsoft-এর সমাধান (MVP):</h3> <!-- হাইলাইটেড টেক্সট -->
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **সাশ্রয়ী MVP:** আমরা ন্যূনতম খরচে কাজ শুরু করি আইডিয়া পরীক্ষার জন্য।</li>
+                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **দ্রুত লঞ্চ:** ৬ মাস নয়, আমরা মাত্র কয়েক সপ্তাহের মধ্যে 'ফার্স্ট ভার্সন' লঞ্চ করি।</li>
+                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **আমরাই আপনার টেক টিম:** আপনার কোনো টেকনিক্যাল জ্ঞানের দরকার নেই।</li>
+                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **ঝুঁকিমুক্ত সাইড-বিজনেস:** আপনাকে চাকরি ছাড়তে হবে না।</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section class="bg-white py-20">
+        
+        <!-- সেকশন ৩: সার্ভিসেস (ডার্ক মোড) -->
+        <section class="bg-gray-900 py-24"> <!-- ম্যাচিং ব্যাকগ্রাউন্ড -->
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">আপনার আইডিয়ার জন্য সঠিক সল্যুশন</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">আপনার আইডিয়ার জন্য সঠিক সল্যুশন</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-3 text-blue-600">MVP ডেভেলপমেন্ট</h3>
-                        <p>দ্রুত ও কম খরচে আপনার আইডিয়াটি পরীক্ষা করার জন্য পারফেক্ট। বাজারে আপনার আইডিয়ার চাহিদা কেমন তা যাচাই করুন।</p>
+                    
+                    <!-- সার্ভিস কার্ড ১ -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">MVP ডেভেলপমেন্ট</h3>
+                        <p class="text-gray-400">দ্রুত ও কম খরচে আপনার আইডিয়াটি পরীক্ষা করার জন্য পারফেক্ট। বাজারে আপনার আইডিয়ার চাহিদা কেমন তা যাচাই করুন।</p>
                     </div>
-                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-3 text-blue-600">কাস্টম ওয়েব ও মোবাইল অ্যাপ</h3>
-                        <p>আপনার ইউনিক বিজনেসের জন্য সম্পূর্ণ কাস্টমাইজড সফটওয়্যার, ই-কমার্স বা মোবাইল অ্যাপ্লিকেশন (অ্যান্ড্রয়েড ও iOS)।</p>
+                    
+                    <!-- সার্ভিস কার্ড ২ -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2zM5 18h.01M19 18h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">কাস্টম ওয়েব ও মোবাইল অ্যাপ</h3>
+                        <p class="text-gray-400">আপনার ইউনিক বিজনেসের জন্য সম্পূর্ণ কাস্টমাইজড সফটওয়্যার, ই-কমার্স বা মোবাইল অ্যাপ্লিকেশন (অ্যান্ড্রয়েড ও iOS)।</p>
                     </div>
-                    <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-3 text-blue-600">টেকনিক্যাল কনসালটেন্সি</h3>
-                        <p>আপনার আইডিয়াটি টেকনিক্যালি কতটা সম্ভব বা কিভাবে করলে ভালো হবে, তা জানতে আমাদের এক্সপার্টদের সাথে কথা বলুন।</p>
+                    
+                    <!-- সার্ভিস কার্ড ৩ -->
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">টেকনিক্যাল কনসালটেন্সি</h3>
+                        <p class="text-gray-400">আপনার আইডিয়াটি টেকনিক্যালি কতটা সম্ভব বা কিভাবে করলে ভালো হবে, তা জানতে আমাদের এক্সপার্টদের সাথে কথা বলুন।</p>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="container mx-auto px-6 py-20">
-            <h2 class="text-3xl font-bold text-center mb-12">শূন্য থেকে লঞ্চিং: আমাদের সহজ ৪টি ধাপ</h2>
-            <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
-                <div class="text-center flex-1">
-                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">১</div>
-                    <h3 class="text-xl font-semibold mb-2">আইডিয়া ও প্ল্যানিং</h3>
-                    <p>আপনি আপনার আইডিয়াটি বলবেন। আমরা একসাথে বসে এর একটি পরিষ্কার রোডম্যাপ তৈরি করবো।</p>
+        
+        <!-- সেকশন ৪: প্রসেস (ডার্ক মোড) -->
+        <section class="container mx-auto px-6 py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white">শূন্য থেকে লঞ্চিং: আমাদের সহজ ৪টি ধাপ</h2>
+            <div class="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
+                
+                <div class="text-center flex-1 relative">
+                    <div class="relative inline-block">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">১</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">আইডিয়া ও প্ল্যানিং</h3>
+                    <p class="text-gray-400">আপনি আপনার আইডিয়াটি বলবেন। আমরা একসাথে বসে এর একটি পরিষ্কার রোডম্যাপ তৈরি করবো।</p>
                 </div>
-                <div class="text-center flex-1">
-                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">২</div>
-                    <h3 class="text-xl font-semibold mb-2">ডিজাইন ও প্রোটোটাইপ</h3>
-                    <p>আপনার অ্যাপ বা ওয়েবসাইট দেখতে কেমন হবে, তার একটি ডিজাইন (UI/UX) আমরা আপনাকে দেখাবো।</p>
+                
+                <div class="text-center flex-1 relative">
+                    <div class="relative inline-block">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">২</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">ডিজাইন ও প্রোটোটাইপ</h3>
+                    <p class="text-gray-400">আপনার অ্যাপ বা ওয়েবসাইট দেখতে কেমন হবে, তার একটি ডিজাইন (UI/UX) আমরা আপনাকে দেখাবো।</p>
                 </div>
-                <div class="text-center flex-1">
-                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">৩</div>
-                    <h3 class="text-xl font-semibold mb-2">ডেভেলপমেন্ট</h3>
-                    <p>আমাদের এক্সপার্ট ডেভেলপাররা কোডিং শুরু করবে এবং আপনি নিয়মিত কাজের আপডেট পেতে থাকবেন।</p>
+                
+                <div class="text-center flex-1 relative">
+                    <div class="relative inline-block">
+                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">৩</div>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">ডেভেলপমেন্ট</h3>
+                    <p class="text-gray-400">আমাদের এক্সপার্ট ডেভেলপাররা কোডিং শুরু করবে এবং আপনি নিয়মিত কাজের আপডেট পেতে থাকবেন।</p>
                 </div>
+                
                 <div class="text-center flex-1">
-                    <div class="bg-blue-600 text-white rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">৪</div>
-                    <h3 class="text-xl font-semibold mb-2">লঞ্চ ও সাপোর্ট</h3>
-                    <p>আপনার বিজনেস এখন লাইভ! আমরা লঞ্চ করার পরেও আপনাকে পূর্ণাঙ্গ সাপোর্ট দিয়ে যাবো।</p>
+                    <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">৪</div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">লঞ্চ ও সাপোর্ট</h3>
+                    <p class="text-gray-400">আপনার বিজনেস এখন লাইভ! আমরা লঞ্চ করার পরেও আপনাকে পূর্ণাঙ্গ সাপোর্ট দিয়ে যাবো।</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="bg-gray-100 py-20">
+        
+        <!-- সেকশন ৫: কনট্যাক্ট ও ফর্ম (ডার্ক মোড) -->
+        <section id="contact" class="bg-gray-950 py-24"> <!-- সেকশন বিজি -->
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
-                    <div class="bg-white p-8 rounded-lg shadow-lg text-center mb-12">
-                        <p class="text-xl italic text-gray-700">"Rupantorsoft-এর আগে আমি ভেবেছিলাম অ্যাপ বানানো খুব জটিল। তারা চাকরি না ছেড়েই আমার সাইড-বিজনেসটি মাত্র ৫ সপ্তাহে লঞ্চ করতে সাহায্য করেছে।"</p>
-                        <p class="mt-4 font-semibold text-blue-600">- একজন সন্তুষ্ট গ্রাহক</p>
+                    
+                    <!-- টেস্টিমোনিয়াল -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center mb-16 border-l-4 border-blue-400">
+                        <p class="text-2xl italic text-gray-300 leading-relaxed">"Rupantorsoft-এর আগে আমি ভেবেছিলাম অ্যাপ বানানো খুব জটিল। তারা চাকরি না ছেড়েই আমার সাইড-বিজনেসটি মাত্র ৫ সপ্তাহে লঞ্চ করতে সাহায্য করেছে।"</p>
+                        <p class="mt-5 font-semibold text-lg text-blue-400">- একজন সন্তুষ্ট গ্রাহক</p>
                     </div>
 
-                    <div class="bg-white p-10 rounded-lg shadow-xl">
-                        <h2 class="text-3xl font-bold text-center mb-6">আপনার আইডিয়াকে আর ফেলে রাখবেন না</h2>
-                        <p class="text-center text-lg text-gray-700 mb-8">আপনার আইডিয়াটি কিভাবে, কত খরচে এবং কত সময়ে লঞ্চ করা সম্ভব তা জানতে আজই ফর্মটি পূরণ করুন।</আ>
+                    <!-- ফর্ম কন্টেইনার -->
+                    <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
+                        <h2 class="text-3xl font-bold text-center mb-6 text-white">আপনার আইডিয়াকে আর ফেলে রাখবেন না</h2>
+                        <p class="text-center text-lg text-gray-400 mb-10">আপনার আইডিয়াটি কিভাবে, কত খরচে এবং কত সময়ে লঞ্চ করা সম্ভব তা জানতে আজই ফর্মটি পূরণ করুন।</p>
                         
-                        <form action="/submit-form" method="POST">
-                            <div class="mb-4">
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">আপনার নাম:</label>
-                                <input type="text" id="name" name="name" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        
+                        <!-- Formspree ফর্ম -->
+                        <form action="https://formspree.io/f/xeopkvdp" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                
+                                <!-- নাম -->
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">আপনার নাম:</label>
+                                    <input type="text" id="name" name="name" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="আপনার নাম">
+                                </div>
+                                
+                                <!-- ইমেইল -->
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">আপনার ইমেইল:</label>
+                                    <input type="email" id="email" name="email" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="your@email.com">
+                                </div>
                             </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">আপনার ইমেইল:</label>
-                                <input type="email" id="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                            
+                            
+                            <!-- আইডিয়া -->
+                            <div class="mb-8">
+                                <label for="idea" class="block text-sm font-medium text-gray-300 mb-2">আপনার আইডিয়া (সংক্ষেপে):</label>
+                                <textarea id="idea" name="idea" rows="5" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="আপনার অ্যাপ বা ওয়েবসাইটের আইডিয়া..."></textarea>
                             </div>
-                            <div class="mb-6">
-                                <label for="idea" class="block text-sm font-medium text-gray-700 mb-1">আপনার আইডিয়া (সংক্ষেপে):</label>
-                                <textarea id="idea" name="idea" rows="4" required class="w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
-                            </div>
+                            
+                            
+                            <!-- সাবমিট বাটন -->
                             <div class="text-center">
-                                <button type="submit" class="bg-blue-600 text-white py-3 px-10 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300">আমার ফ্রি কনসালটেশন বুক করুন</button>
+                                <button type="submit" class="bg-blue-600 text-white py-4 px-12 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">আমার ফ্রি কনসালটেশন বুক করুন</button>
                             </div>
                         </form>
                     </div>
@@ -129,9 +220,16 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <p>&copy; ২০২৫ Rupantorsoft. সর্বসত্ত্ব সংরক্ষিত।</p>
+    
+    <!-- ফুটার (ডার্ক মোড) -->
+    <footer class="bg-black text-white py-12"> <!-- ডার্কার ফুটার -->
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-white mb-4">Rupantorsoft</div>
+            <p class="text-gray-500">&copy; ২০২৫ Rupantorsoft. সর্বসত্ত্ব সংরক্ষিত।</p>
+        </div>
     </footer>
-
 </body>
 </html>
+
+
+
