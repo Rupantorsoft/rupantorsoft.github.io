@@ -5,165 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RupantorSoft - ভাবনাকে বাস্তবে রূপ দিন</title>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Smooth Page Entry */
     body {
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      font-family: "Noto Sans Bengali", sans-serif;
     }
 
-    /* Floating Background Blobs */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.4;
-      animation: float 8s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+    /* Background Gradient Animation */
+    .animated-bg {
+      background: linear-gradient(-45deg, #e0f2fe, #dbeafe, #f3e8ff, #e0f7fa);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
     }
 
-    /* Service Card Hover */
-    .service-card {
-      background: linear-gradient(135deg, #eff6ff, #e0f2fe);
-      transition: all 0.5s ease;
-    }
-    .service-card:hover {
-      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    footer {
-      border-top: 4px solid transparent;
-      border-image: linear-gradient(90deg, #2563eb, #9333ea);
-      border-image-slice: 1;
+    /* Glowing Button */
+    .glow-btn {
+      background: linear-gradient(90deg, #3b82f6, #2563eb, #1e40af);
+      background-size: 200% auto;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(37,99,235,0.4);
     }
-    footer a:hover {
-      transform: scale(1.2);
-      color: #60a5fa;
+    .glow-btn:hover {
+      background-position: right center;
+      box-shadow: 0 0 25px rgba(37,99,235,0.7);
+      transform: scale(1.05);
     }
   </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Bengali"', 'Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-white text-gray-900 relative overflow-hidden">
 
-  <!-- Floating blobs -->
-  <div class="blob bg-blue-200 w-72 h-72 top-10 left-1/4"></div>
-  <div class="blob bg-purple-300 w-64 h-64 bottom-20 right-1/3"></div>
+<body class="bg-white text-gray-800 antialiased">
 
-  <!-- Hero Section -->
-  <section class="relative text-center py-32 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+  <header class="bg-white/80 sticky top-0 z-50 backdrop-blur-lg shadow-md">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-2 text-primary-700 font-bold text-2xl">
+        <img src="rupantorsoft_logo.png" alt="RupantorSoft Logo" class="h-10 w-auto animate-pulse" />
+        Rupantor<span class="text-indigo-600">Soft</span>
+      </a>
+      <a href="#contact-form"
+         class="glow-btn text-white px-5 py-2 rounded-full font-medium shadow-md">
+        ফ্রি কনসালটেশন নিন
+      </a>
+    </nav>
+  </header>
+
+  <section id="home" class="animated-bg text-center pt-24 pb-32 relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
-      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-        আপনার <span class="text-blue-600">ভাবনাকে</span> বাস্তবে রূপ দিন
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+        ভাবনাকে ডিজিটাল বাস্তবতায় রূপ দিন 💡
       </h1>
-      <p data-aos="fade-up" data-aos-delay="150" class="text-lg md:text-xl text-gray-700 mb-8">
-        RupantorSoft — যেখানে আপনার আইডিয়া পায় প্রযুক্তির রূপ।
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+        RupantorSoft আপনার আইডিয়াকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
       </p>
-      <a href="#services" data-aos="fade-up" data-aos-delay="300"
-         class="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
-        শুরু করুন এখনই
+      <a href="#contact-form"
+         data-aos="zoom-in"
+         class="glow-btn inline-block text-white px-8 py-3 rounded-full font-semibold text-lg mt-4 shadow-lg">
+        আজই আপনার আইডিয়া নিয়ে কথা বলুন 🚀
       </a>
     </div>
   </section>
 
-  <!-- How We Work Section (Your Added Section) -->
-  <section id="how-we-work" class="py-20 bg-blue-50">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-
-        <div data-aos="fade-right">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            আপনার আইডিয়াটি কি এই ভয়ে আটকে আছে?
-          </h2>
-          <p class="text-gray-700 mb-6 text-lg">
-            "ব্যবসা শুরু করবো" - এই কথাটা আপনি নিজেকে গত কত বছর ধরে বলছেন? সম্ভবত আপনার মাথায় দুর্দান্ত একটি আইডিয়া আছে, কিন্তু শুরু করতে পারছেন না কারণ এই প্রশ্নগুলো আপনাকে থামিয়ে রেখেছে:
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-1"></i>
-              <span>"অ্যাপ বা ওয়েবসাইট বানাতে ৬ মাস সময় আর লাখ লাখ টাকা বিনিয়োগ প্রয়োজন।"</span>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-1"></i>
-              <span>"আমি তো কোড জানি না, কিভাবে একটি টেক বিজনেস বানাবো?"</span>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-1"></i>
-              <span>"একটি ভালো এবং বিশ্বস্ত ডেভেলপার টিম কোথায় পাবো?"</span>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 mr-3 shrink-0 mt-1"></i>
-              <span>"চাকরি ছেড়ে এত বড় টেকনিক্যাল ঝুঁকি নেওয়া কি ঠিক হবে?"</span>
-            </li>
-          </ul>
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        আমাদের সেবাসমূহ
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-aos="fade-up" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="zap" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">MVP ডেভেলপমেন্ট</h3>
+          <p>দ্রুত ও কম খরচে আপনার আইডিয়াকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
         </div>
-
-        <div data-aos="fade-left" data-aos-delay="200" class="bg-white p-8 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold mb-4 text-blue-700">এই পুরো ধারণাটাই এখন অতীত!</h3>
-          <p class="text-gray-700 mb-6">
-            একটি আইডিয়াকে পরীক্ষা করার জন্য আপনার ৬ মাস সময় বা বিশাল ইনভেস্টমেন্টের দরকার নেই। আপনার দরকার শুধু আইডিয়াটির মূল অংশটুকু (MVP) যত দ্রুত সম্ভব কাস্টমারদের হাতে পৌঁছে দেওয়া।
-          </p>
-          <h4 class="text-lg font-semibold mb-4 text-gray-900">RupantorSoft আপনাকে ধাপে ধাপে দেখাবে:</h4>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 shrink-0 mt-1"></i>
-              <span>কিভাবে কোনো টেকনিক্যাল জ্ঞান ছাড়াই আপনার আইডিয়াটিকে একটি বাস্তব সফটওয়্যারে রূপ দেওয়া যায়।</span>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 shrink-0 mt-1"></i>
-              <span>কিভাবে বিশাল খরচ না করে, মাত্র কয়েক সপ্তাহের মধ্যেই আপনার MVP বাজারে লঞ্চ করা যায়।</span>
-            </li>
-            <li class="flex items-start">
-              <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 shrink-0 mt-1"></i>
-              <span>কিভাবে চাকরি না ছেড়েই, আপনার সাইড-বিজনেসটি শুরু করা যায় এবং আসল ফিডব্যাক নেওয়া যায়।</span>
-            </li>
-          </ul>
-          <p class="mt-6 text-lg font-semibold text-gray-800">
-            আপনার আইডিয়াকে আর ফেলে রাখবেন না।
-          </p>
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="smartphone" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
+          <p>অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
         </div>
-
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="lightbulb" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">টেক কনসালটেশন</h3>
+          <p>আপনার আইডিয়াকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="450" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="workflow" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">ওয়ার্কফ্লো অটোমেশন</h3>
+          <p>আপনার ম্যানুয়াল কাজগুলো স্বয়ংক্রিয় করুন। যা আপনার সময় এবং অর্থ সাশ্রয় করে।</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-10">
-    <div class="container mx-auto">
-      <p class="text-sm">&copy; 2025 RupantorSoft. সর্বস্বত্ব সংরক্ষিত।</p>
-      <div class="flex justify-center mt-4 space-x-6">
-        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+  <section class="bg-primary-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        আমাদের ক্লায়েন্টরা যা বলছেন
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="zoom-in" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“RupantorSoft আমাদের আইডিয়াকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</p>
+          <h4 class="font-bold text-primary-700">— Startup Founder, Dhaka</h4>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“প্রফেশনাল, ফাস্ট, এবং সাশ্রয়ী সার্ভিস — Highly Recommended!”</p>
+          <h4 class="font-bold text-primary-700">— CEO, Local Brand</h4>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“তাদের MVP প্যাকেজ দিয়ে আমি আমার স্টার্টআপ শুরু করেছি!”</p>
+          <h4 class="font-bold text-primary-700">— Entrepreneur</h4>
+        </div>
       </div>
     </div>
+  </section>
+
+  <section id="contact-form" class="py-20 animated-bg">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        আপনার আইডিয়া নিয়ে আলোচনা শুরু হোক 🚀
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="150" class="text-gray-700 mb-10 max-w-2xl mx-auto">
+        নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।
+      </p>
+
+      <form action="https://formspree.io/f/xeopkvdp" method="POST"
+            data-aos="zoom-in"
+            class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg text-left">
+        <label class="block mb-4">
+          <span class="text-gray-700">নাম:</span>
+          <input name="name" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার নাম">
+        </label>
+        <label class="block mb-4">
+          <span class="text-gray-700">ইমেইল:</span>
+          <input type="email" name="email" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="your@email.com">
+        </label>
+        <label class="block mb-6">
+          <span class="text-gray-700">আইডিয়া:</span>
+          <textarea name="message" rows="4" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার প্রজেক্ট বা আইডিয়ার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
+        </label>
+        <button type="submit" class="glow-btn w-full text-white font-semibold py-3 rounded-lg">
+          সাবমিট করুন ✉️
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+    <h3 class="text-2xl font-bold text-white mb-6">RupantorSoft</h3>
+    <div class="flex justify-center space-x-6 mb-6">
+      <a href="https://facebook.com/RupantorSoft" class="hover:text-primary-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+      <a href="https://linkedin.com/company/rupantorsoft" class="hover:text-primary-500"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+      <a href="https://github.com/Rupantorsoft" class="hover:text-primary-500"><i data-lucide="github" class="w-6 h-6"></i></a>
+    </div>
+    <p class="text-sm">&copy; ২০২৫ RupantorSoft. সর্বস্বত্ব সংরক্ষিত।</p>
   </footer>
 
-  <!-- Initialize -->
   <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 1000, once: true });
     lucide.createIcons();
   </script>
-
 </body>
 </html>
