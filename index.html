@@ -1,296 +1,197 @@
 <!DOCTYPE html>
 <html lang="bn" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupantorsoft - আপনার আইডিয়াকে বাস্তবে রূপ দিন</title>
-    
-    <!-- CSS ফাইলটি মূল ফোল্ডার থেকে লোড হচ্ছে -->
-    <link href="./style.css" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* ডার্ক মোডে স্ক্রলবার স্টাইল করার জন্য (ঐচ্ছিক) */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #111827; /* bg-gray-900 */
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #374151; /* bg-gray-700 */
-            border-radius: 6px;
-            border: 3px solid #111827;
-        }
-        /* স্ক্রল করার সময় ন্যাভবার লিঙ্কের অফসেট ঠিক করার জন্য */
-        section[id] {
-            scroll-margin-top: 80px; /* আপনার ন্যাভবারের উচ্চতা অনুযায়ী এটি ঠিক করুন */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RupantorSoft - ভাবনাকে বাস্তবে রূপ দিন</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Noto Sans Bengali Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Noto Sans Bengali", sans-serif;
+    }
+
+    /* Background Gradient Animation */
+    .animated-bg {
+      background: linear-gradient(-45deg, #e0f2fe, #dbeafe, #f3e8ff, #e0f7fa);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glowing Button */
+    .glow-btn {
+      background: linear-gradient(90deg, #3b82f6, #2563eb, #1e40af);
+      background-size: 200% auto;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(37,99,235,0.4);
+    }
+    .glow-btn:hover {
+      background-position: right center;
+      box-shadow: 0 0 25px rgba(37,99,235,0.7);
+      transform: scale(1.05);
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans Bengali"', 'Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body class="bg-gray-900 text-gray-200"> <!-- ডার্ক মোড ব্যাকগ্রাউন্ড -->
 
-    
-    <!-- ন্যাভবার: ডার্ক মোড (আপডেটেড) -->
-    <header class="sticky top-0 z-50 bg-gray-950/90 backdrop-blur-sm shadow-lg shadow-blue-500/10 transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            
-            <!-- নতুন লোগো (সাইজ আপডেট) -->
-            <a href="#" class="flex items-center space-x-2">
-                <img src="./rupantorsoft_logo.png" alt="Rupantorsoft Logo" class="h-9 w-auto"> <!-- h-6 থেকে h-9 করা হয়েছে -->
-            </a>
-            
-            <!-- ডেস্কটপ মেনু -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors font-medium">সার্ভিস</a>
-                <a href="#process" class="text-gray-300 hover:text-blue-400 transition-colors font-medium">প্রসেস</a>
-                <a href="#contact" class="bg-blue-600 text-white py-2 px-5 rounded-full hover:bg-blue-700 transition duration-300 font-semibold shadow-sm hover:shadow-lg">ফ্রি কনসালটেশন</a>
-            </div>
+<body class="bg-white text-gray-800 antialiased">
 
-            <!-- মোবাইল মেনু বাটন (নতুন) -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
+  <!-- Header -->
+  <header class="bg-white/80 sticky top-0 z-50 backdrop-blur-lg shadow-md">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center space-x-2 text-primary-700 font-bold text-2xl">
+        <img src="rupantorsoft_logo.png" alt="RupantorSoft Logo" class="h-10 w-auto animate-pulse" />
+        <span>RupantorSoft</span>
+      </a>
+      <a href="#contact-form"
+         class="glow-btn text-white px-5 py-2 rounded-full font-medium shadow-md">
+        ফ্রি কনসালটেশন নিন
+      </a>
+    </nav>
+  </header>
 
-        <!-- মোবাইল মেনু (ড্রপডাউন - নতুন) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 absolute top-full left-0 w-full shadow-xl">
-            <a href="#services" class="block text-center text-gray-300 hover:bg-gray-800 py-3 px-6 transition-colors">সার্ভিস</a>
-            <a href="#process" class="block text-center text-gray-300 hover:bg-gray-800 py-3 px-6 transition-colors">প্রসেস</a>
-            <a href="#contact" class="block text-center bg-blue-600 text-white py-4 px-6 transition-colors font-semibold">ফ্রি কনসালটেশন</a>
+  <!-- Hero Section -->
+  <section id="home" class="animated-bg text-center pt-24 pb-32 relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+        ভাবনাকে ডিজিটাল বাস্তবতায় রূপ দিন 💡
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+        RupantorSoft আপনার আইডিয়াকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
+      </p>
+      <a href="#contact-form"
+         data-aos="zoom-in"
+         class="glow-btn inline-block text-white px-8 py-3 rounded-full font-semibold text-lg mt-4 shadow-lg">
+        আজই আপনার আইডিয়া নিয়ে কথা বলুন 🚀
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        আমাদের সেবাসমূহ
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="zap" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">MVP ডেভেলপমেন্ট</h3>
+          <p>দ্রুত ও কম খরচে আপনার আইডিয়াকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
         </div>
-    </header>
-
-    <main>
-        
-        <!-- সেকশন ১: হিরো (ডার্ক মোড) -->
-        <section class="bg-gradient-to-br from-gray-900 to-blue-950 py-24 text-center"> <!-- ডার্ক গ্রাডিয়েন্ট -->
-            <div class="container mx-auto px-6">
-                <!-- টাইটেল সাইজ মোবাইলের জন্য অপ্টিমাইজ করা হয়েছে -->
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 text-white">আপনার আইডিয়াকে বাস্তবে রূপ দিন</h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">চাকরি না ছেড়েই, বিশাল খরচ ছাড়াই আপনার অ্যাপ বা ওয়েবসাইট লঞ্চ করুন। Rupantorsoft আপনার টেকনিক্যাল পার্টনার হতে প্রস্তুত।</p>
-                <a href="#contact" class="bg-blue-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">আজই ফ্রি কনসালটেশন নিন</a>
-            </div>
-        </section>
-
-        
-        <!-- সেকশন ২: ভয় বনাম সমাধান (ডার্ক মোড) -->
-        <section class="container mx-auto px-6 py-24">
-            <!-- টাইটেল সাইজ মোবাইলের জন্য অপ্টিমাইজ করা হয়েছে -->
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16 text-white">"আইডিয়া তো আছে, কিন্তু ভয় পাচ্ছেন?"</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-lg"> <!-- ডার্ক কার্ড -->
-                    <h3 class="text-2xl font-semibold mb-6 text-red-400">সাধারণ ভয়গুলো:</h3> <!-- হাইলাইটেড টেক্সট -->
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "অ্যাপ/ওয়েবসাইট বানাতে লাখ লাখ টাকা লাগবে।"</li>
-                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "বানাতে ৬ মাসের বেশি সময় লেগে যাবে।"</li>
-                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "আমি তো কোডিং বা টেকনিক্যাল কিছুই জানি না।"</li>
-                        <li class="flex items-start text-lg"><span class="text-red-500 font-bold text-2xl mr-3 mt-1">❌</span> "চাকরি ছেড়ে এত বড় ঝুঁকি কিভাবে নেবো?"</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-lg"> <!-- ডার্ক কার্ড -->
-                    <h3 class="text-2xl font-semibold mb-6 text-green-400">Rupantorsoft-এর সমাধান (MVP):</h3> <!-- হাইলাইটেড টেক্সট -->
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **সাশ্রয়ী MVP:** আমরা ন্যূনতম খরচে কাজ শুরু করি আইডিয়া পরীক্ষার জন্য।</li>
-                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **দ্রুত লঞ্চ:** ৬ মাস নয়, আমরা মাত্র কয়েক সপ্তাহের মধ্যে 'ফার্স্ট ভার্সন' লঞ্চ করি।</li>
-                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **আমরাই আপনার টেক টিম:** আপনার কোনো টেকনিক্যাল জ্ঞানের দরকার নেই।</li>
-                        <li class="flex items-start text-lg"><span class="text-green-500 font-bold text-2xl mr-3 mt-1">✅</span> **ঝুঁকিমুক্ত সাইড-বিজনেস:** আপনাকে চাকরি ছাড়তে হবে না।</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- সেকশন ৩: সার্ভিসেস (ডার্ক মোড) -->
-        <section id="services" class="bg-gray-900 py-24"> <!-- 'id' যোগ করা হয়েছে -->
-            <div class="container mx-auto px-6">
-                <!-- টাইটেল সাইজ মোবাইলের জন্য অপ্টিমাইজ করা হয়েছে -->
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16 text-white">আপনার আইডিয়ার জন্য সঠিক সল্যুশন</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <!-- সার্ভিস কার্ড ১ -->
-                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-white">MVP ডেভেলপমেন্ট</h3>
-                        <p class="text-gray-400">দ্রুত ও কম খরচে আপনার আইডিয়াটি পরীক্ষা করার জন্য পারফেক্ট। বাজারে আপনার আইডিয়ার চাহিদা কেমন তা যাচাই করুন।</p>
-                    </div>
-                    
-                    <!-- সার্ভিস কার্ড ২ -->
-                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2zM5 18h.01M19 18h.01" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-white">কাস্টম ওয়েব ও মোবাইল অ্যাপ</h3>
-                        <p class="text-gray-400">আপনার ইউনিক বিজনেসের জন্য সম্পূর্ণ কাস্টমাইজড সফটওয়্যার, ই-কমার্স বা মোবাইল অ্যাপ্লিকেশন (অ্যান্ড্রয়েড ও iOS)।</p>
-                    </div>
-                    
-                    <!-- সার্ভিস কার্ড ৩ -->
-                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="w-16 h-16 bg-blue-900/50 text-blue-400 rounded-full flex items-center justify-center mb-6"> <!-- ডার্ক আইকন বিজি -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-white">টেকনিক্যাল কনসালটেন্সি</h3>
-                        <p class="text-gray-400">আপনার আইডিয়াটি টেকনিক্যালি কতটা সম্ভব বা কিভাবে করলে ভালো হবে, তা জানতে আমাদের এক্সপার্টদের সাথে কথা বলুন।</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- সেকশন ৪: প্রসেস (ডার্ক মোড) -->
-        <section id="process" class="container mx-auto px-6 py-24"> <!-- 'id' যোগ করা হয়েছে -->
-            <!-- টাইটেল সাইজ মোবাইলের জন্য অপ্টিমাইজ করা হয়েছে -->
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-16 text-white">শূন্য থেকে লঞ্চিং: আমাদের সহজ ৪টি ধাপ</h2>
-            <div class="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
-                
-                <div class="text-center flex-1 relative">
-                    <div class="relative inline-block">
-                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">১</div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">আইডিয়া ও প্ল্যানিং</h3>
-                    <p class="text-gray-400">আপনি আপনার আইডিয়াটি বলবেন। আমরা একসাথে বসে এর একটি পরিষ্কার রোডম্যাপ তৈরি করবো।</p>
-                </div>
-                
-                <div class="text-center flex-1 relative">
-                    <div class="relative inline-block">
-                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">২</div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">ডিজাইন ও প্রোটোটাইপ</h3>
-                    <p class="text-gray-400">আপনার অ্যাপ বা ওয়েবসাইট দেখতে কেমন হবে, তার একটি ডিজাইন (UI/UX) আমরা আপনাকে দেখাবো।</p>
-                </div>
-                
-                <div class="text-center flex-1 relative">
-                    <div class="relative inline-block">
-                        <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">৩</div>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">ডেভেলপমেন্ট</h3>
-                    <p class="text-gray-400">আমাদের এক্সপার্ট ডেভেলপাররা কোডিং শুরু করবে এবং আপনি নিয়মিত কাজের আপডেট পেতে থাকবেন।</p>
-                </div>
-                
-                <div class="text-center flex-1">
-                    <div class="bg-blue-600 text-white rounded-full h-20 w-20 flex items-center justify-center text-3xl font-bold mx-auto mb-5 shadow-lg">৪</div>
-                    <h3 class="text-xl font-semibold mb-2 text-white">লঞ্চ ও সাপোর্ট</h3>
-                    <p class="text-gray-400">আপনার বিজনেস এখন লাইভ! আমরা লঞ্চ করার পরেও আপনাকে পূর্ণাঙ্গ সাপোর্ট দিয়ে যাবো।</p>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- সেকশন ৫: কনট্যাক্ট ও ফর্ম (ডার্ক মোড) -->
-        <section id="contact" class="bg-gray-950 py-24"> <!-- সেকশন বিজি -->
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    
-                    <!-- টেস্টিমোনিয়াল -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center mb-16 border-l-4 border-blue-400">
-                        <p class="text-2xl italic text-gray-300 leading-relaxed">"Rupantorsoft-এর আগে আমি ভেবেছিলাম অ্যাপ বানানো খুব জটিল। তারা চাকরি না ছেড়েই আমার সাইড-বিজনেসটি মাত্র ৫ সপ্তাহে লঞ্চ করতে সাহায্য করেছে।"</p>
-                        <p class="mt-5 font-semibold text-lg text-blue-400">- একজন সন্তুষ্ট গ্রাহক</p>
-                    </div>
-
-                    <!-- ফর্ম কন্টেইনার -->
-                    <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl">
-                        <h2 class="text-3xl font-bold text-center mb-6 text-white">আপনার আইডিয়াকে আর ফেলে রাখবেন না</h2>
-                        <p class="text-center text-lg text-gray-400 mb-10">আপনার আইডিয়াটি কিভাবে, কত খরচে এবং কত সময়ে লঞ্চ করা সম্ভব তা জানতে আজই ফর্মটি পূরণ করুন।</p>
-                        
-                        
-                        <!-- Formspree ফর্ম -->
-                        <form action="https://formspree.io/f/xeopkvdp" method="POST">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                
-                                <!-- নাম -->
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-300 mb-2">আপনার নাম:</label>
-                                    <input type="text" id="name" name="name" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="আপনার নাম">
-                                </div>
-                                
-                                <!-- ইমেইল -->
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">আপনার ইমেইল:</label>
-                                    <input type="email" id="email" name="email" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="your@email.com">
-                                T </div>
-                            </div>
-                            
-                            
-                            <!-- আইডিয়া -->
-                            <div class="mb-8">
-                                <label for="idea" class="block text-sm font-medium text-gray-300 mb-2">আপনার আইডিয়া (সংক্ষেপে):</label>
-                                <textarea id="idea" name="idea" rows="5" required class="w-full p-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" placeholder="আপনার অ্যাপ বা ওয়েবসাইটের আইডিয়া..."></textarea>
-                            </div>
-                            
-                            
-                            <!-- সাবমিট বাটন -->
-                            <div class="text-center">
-                                <button type="submit" class="bg-blue-600 text-white py-4 px-12 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">আমার ফ্রি কনসালটেশন বুক করুন</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    
-    <!-- ফুটার (ডার্ক মোড) - আপডেটেড -->
-    <footer class="bg-black text-white py-12"> <!-- ডার্কার ফুটার -->
-        <div class="container mx-auto px-6 text-center">
-            
-            <!-- সোশ্যাল মিডিয়া লিঙ্ক (নতুন) -->
-            <div class="flex justify-center space-x-6 mb-8">
-                <!-- LinkedIn -->
-                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="LinkedIn">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <!-- GitHub -->
-                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.109-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <!-- Facebook -->
-                <a href="#" class="text-gray-400 hover:text-white transition-colors" title="Facebook">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-            </div>
-
-            <div class="text-2xl font-bold text-white mb-4">Rupantorsoft</div>
-            <p class="text-gray-500">&copy; ২০২৫ Rupantorsoft. সর্বসত্ত্ব সংরক্ষিত।</p>
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="smartphone" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
+          <p>অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
         </div>
-    </footer>
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="lightbulb" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-3">টেক কনসালটেশন</h3>
+          <p>আপনার আইডিয়াকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- মোবাইল মেনু টগল করার জন্য JavaScript (নতুন) -->
-    <script>
-        // মেনু বাটনটি ধরুন
-        const menuToggle = document.getElementById('menu-toggle');
-        // মোবাইল মেনুটি ধরুন
-        const mobileMenu = document.getElementById('mobile-menu');
+  <!-- Testimonials -->
+  <section class="bg-primary-50 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+        আমাদের ক্লায়েন্টরা যা বলছেন
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="zoom-in" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“RupantorSoft আমাদের আইডিয়াকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</p>
+          <h4 class="font-bold text-primary-700">— Startup Founder, Dhaka</h4>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“প্রফেশনাল, ফাস্ট, এবং সাশ্রয়ী সার্ভিস — Highly Recommended!”</p>
+          <h4 class="font-bold text-primary-700">— CEO, Local Brand</h4>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="bg-white p-8 rounded-2xl shadow-lg">
+          <p class="italic text-gray-700 mb-4">“তাদের MVP প্যাকেজ দিয়ে আমি আমার স্টার্টআপ শুরু করেছি!”</p>
+          <h4 class="font-bold text-primary-700">— Entrepreneur</h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // বাটনে ক্লিক ইভেন্ট যোগ করুন
-        menuToggle.addEventListener('click', function() {
-            // 'hidden' ক্লাসটি যোগ/বাদ দিন
-            mobileMenu.classList.toggle('hidden');
-        });
+  <!-- Contact Form -->
+  <section id="contact-form" class="py-20 animated-bg">
+    <div class="container mx-auto px-6 text-center">
+      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        আপনার আইডিয়া নিয়ে আলোচনা শুরু হোক 🚀
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="150" class="text-gray-700 mb-10 max-w-2xl mx-auto">
+        নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।
+      </p>
 
-        // মোবাইল মেনুর লিঙ্কে ক্লিক করলে যেন মেনু বন্ধ হয়ে যায়
-        document.querySelectorAll('#mobile-menu a').forEach(item => {
-            item.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+      <form action="https://formspree.io/f/xeopkvdp" method="POST"
+            data-aos="zoom-in"
+            class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg text-left">
+        <label class="block mb-4">
+          <span class="text-gray-700">নাম:</span>
+          <input name="name" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার নাম">
+        </label>
+        <label class="block mb-4">
+          <span class="text-gray-700">ইমেইল:</span>
+          <input type="email" name="email" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="your@email.com">
+        </label>
+        <label class="block mb-6">
+          <span class="text-gray-700">আইডিয়া:</span>
+          <textarea name="message" rows="4" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার প্রজেক্ট বা আইডিয়ার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
+        </label>
+        <button type="submit" class="glow-btn w-full text-white font-semibold py-3 rounded-lg">
+          সাবমিট করুন ✉️
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+    <h3 class="text-2xl font-bold text-white mb-6">RupantorSoft</h3>
+    <div class="flex justify-center space-x-6 mb-6">
+      <a href="https://facebook.com/RupantorSoft" class="hover:text-primary-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+      <a href="https://linkedin.com/company/rupantorsoft" class="hover:text-primary-500"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+      <a href="https://github.com/Rupantorsoft" class="hover:text-primary-500"><i data-lucide="github" class="w-6 h-6"></i></a>
+    </div>
+    <p class="text-sm">&copy; ২০২৫ RupantorSoft. সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+
+  <!-- Script Init -->
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    lucide.createIcons();
+  </script>
 </body>
 </html>
-
