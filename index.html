@@ -6,33 +6,25 @@
   <title>Rupantorsoft - ভাবনাকে বাস্তবে রূপ দিন</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
   <script src="https://unpkg.com/lucide@latest"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: "Noto Sans Bengali", sans-serif;
     }
-
-    /* Background Gradient Animation */
     .animated-bg {
       background: linear-gradient(-45deg, #e0f2fe, #dbeafe, #f3e8ff, #e0f7fa);
       background-size: 400% 400%;
       animation: gradientMove 12s ease infinite;
     }
-
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* Glowing Button */
     .glow-btn {
       background: linear-gradient(90deg, #3b82f6, #2563eb, #1e40af);
       background-size: 200% auto;
@@ -53,6 +45,22 @@
           fontFamily: {
             sans: ['"Noto Sans Bengali"', 'Inter', 'sans-serif'],
           },
+          // আমি আপনার লোগোর রঙের সাথে মিলিয়ে একটি প্রাইমারি কালার যোগ করে দিচ্ছি
+          // এটি bg-primary-50, text-primary-600 ইত্যাদি ক্লাসে কাজ করবে
+          colors: {
+            primary: {
+              '50': '#e0f2fe',
+              '100': '#bfe6fd',
+              '200': '#9bd8fc',
+              '300': '#78cafb',
+              '400': '#5abefa',
+              '500': '#3eb2f9', 
+              '600': '#0ea5e9', // আপনার লোগোর কাছাকাছি রঙ
+              '700': '#0284c7',
+              '800': '#0369a1',
+              '900': '#075985',
+            }
+          }
         },
       },
     };
@@ -63,13 +71,13 @@
 
   <header class="bg-white/80 sticky top-0 z-50 backdrop-blur-lg shadow-md">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home" class="flex items-center space-x-2 text-primary-700 font-bold text-2xl">
-        <img src="rupantorsoft_logo.png" alt="RupantorSoft Logo" class="h-10 w-auto animate-pulse" />
+      <a href="#home" class="flex items-center space-x-2 text-gray-800 font-bold text-2xl">
+        <img src="rupantorsoft_logo.png" alt="RupantorSoft Logo" class="h-10 w-auto" />
         <span>Rupantorsoft</span>
       </a>
       <a href="#contact-form"
          class="glow-btn text-white px-5 py-2 rounded-full font-medium shadow-md">
-        ফ্রি কনসালটেশন নিন
+        ফ্রি পরামর্শ নিন
       </a>
     </nav>
   </header>
@@ -77,15 +85,15 @@
   <section id="home" class="animated-bg text-center pt-24 pb-32 relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
       <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-        ভাবনাকে ডিজিটাল বাস্তবতায় রূপ দিন 💡
+        ভাবনাকে প্রযুক্তিগত বাস্তবতায় রূপ দিন 💡
       </h1>
       <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-        Rupantorsoft আপনার আইডিয়াকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
+        Rupantorsoft আপনার ভাবনাকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
       </p>
       <a href="#contact-form"
          data-aos="zoom-in"
          class="glow-btn inline-block text-white px-8 py-3 rounded-full font-semibold text-lg mt-4 shadow-lg">
-        আজই আপনার আইডিয়া নিয়ে কথা বলুন 🚀
+        আজই আপনার ভাবনা নিয়ে কথা বলুন 🚀
       </a>
     </div>
   </section>
@@ -99,7 +107,7 @@
         <div data-aos="fade-up" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
           <i data-lucide="zap" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-3">MVP ডেভেলপমেন্ট</h3>
-          <p>দ্রুত ও কম খরচে আপনার আইডিয়াকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
+          <p>দ্রুত ও কম খরচে আপনার ভাবনাকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
         </div>
         <div data-aos="fade-up" data-aos-delay="150" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
           <i data-lucide="smartphone" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
@@ -108,8 +116,8 @@
         </div>
         <div data-aos="fade-up" data-aos-delay="300" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
           <i data-lucide="lightbulb" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">টেক কনসালটেশন</h3>
-          <p>আপনার আইডিয়াকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
+          <h3 class="text-xl font-semibold mb-3">প্রযুক্তিগত পরামর্শ</h3>
+          <p>আপনার ভাবনাকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
         </div>
         <div data-aos="fade-up" data-aos-delay="450" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
           <i data-lucide="workflow" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
@@ -127,7 +135,7 @@
       </h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div data-aos="zoom-in" class="bg-white p-8 rounded-2xl shadow-lg">
-          <p class="italic text-gray-700 mb-4">“Rupantorsoft আমাদের আইডিয়াকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</p>
+          <p class="italic text-gray-700 mb-4">“Rupantorsoft আমাদের ভাবনাকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</p>
           <h4 class="font-bold text-primary-700">— Founder, Dhaka</h4>
         </div>
         <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-8 rounded-2xl shadow-lg">
@@ -145,7 +153,7 @@
   <section id="contact-form" class="py-20 animated-bg">
     <div class="container mx-auto px-6 text-center">
       <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        আপনার আইডিয়া নিয়ে আলোচনা শুরু হোক 🚀
+        আপনার ভাবনা নিয়ে আলোচনা শুরু হোক 🚀
       </h2>
       <p data-aos="fade-up" data-aos-delay="150" class="text-gray-700 mb-10 max-w-2xl mx-auto">
         নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।
@@ -163,8 +171,8 @@
           <input type="email" name="email" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="your@email.com">
         </label>
         <label class="block mb-6">
-          <span class="text-gray-700">আইডিয়া:</span>
-          <textarea name="message" rows="4" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার প্রজেক্ট বা আইডিয়ার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
+          <span class="text-gray-700">আপনার ভাবনা:</span>
+          <textarea name="message" rows="4" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার প্রজেক্ট বা ভাবনার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
         </label>
         <button type="submit" class="glow-btn w-full text-white font-semibold py-3 rounded-lg">
           সাবমিট করুন ✉️
@@ -176,9 +184,9 @@
   <footer class="bg-gray-900 text-gray-400 py-12 text-center">
     <h3 class="text-2xl font-bold text-white mb-6">Rupantorsoft</h3>
     <div class="flex justify-center space-x-6 mb-6">
-      <a href="https://facebook.com/RupantorSoft" class="hover:text-primary-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-      <a href="https://linkedin.com/company/rupantorsoft" class="hover:text-primary-500"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-      <a href="https://github.com/Rupantorsoft" class="hover:text-primary-500"><i data-lucide="github" class="w-6 h-6"></i></a>
+      <a href="https://facebook.com/RupantorSoft" target="_blank" class="hover:text-primary-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+      <a href="https://linkedin.com/company/rupantorsoft" target="_blank" class="hover:text-primary-500"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+      <a href="https://github.com/Rupantorsoft" target="_blank" class="hover:text-primary-500"><i data-lucide="github" class="w-6 h-6"></i></a>
     </div>
     <p class="text-sm">&copy; ২০২৫ Rupantorsoft. সর্বস্বত্ব সংরক্ষিত।</p>
   </footer>
