@@ -1,0 +1,150 @@
+/*
+ * Source stylesheet. Edit this file, then run `npm run build`
+ * to regenerate assets/css/styles.css (the file the site loads).
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-slate-300 antialiased selection:bg-brand-400 selection:text-ink-950;
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-brand-400;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container-page {
+    @apply mx-auto max-w-6xl px-5;
+  }
+
+  .section {
+    @apply relative border-t border-white/5 py-24;
+  }
+
+  .section-header {
+    @apply mx-auto mb-14 max-w-2xl text-center;
+  }
+
+  .eyebrow {
+    @apply mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-white md:text-4xl;
+  }
+
+  /* Icons (inline SVG sprite) */
+  .icon {
+    @apply inline-block shrink-0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-badge {
+    @apply mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-400 text-ink-950 hover:-translate-y-px hover:bg-brand-300 hover:shadow-[0_10px_30px_-8px_rgba(34,205,240,0.6)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 font-medium text-white hover:border-brand-400/60 hover:bg-white/5;
+  }
+
+  .nav-link {
+    @apply transition-colors hover:text-brand-300;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-2xl border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] p-7 transition duration-300 hover:-translate-y-1 hover:border-brand-400/45 hover:shadow-[0_20px_40px_-20px_rgba(34,205,240,0.35)];
+  }
+
+  .card-title {
+    @apply mb-2 text-xl font-semibold text-white;
+  }
+
+  .card-text {
+    @apply leading-relaxed text-slate-400;
+  }
+
+  /* Forms */
+  .form-label {
+    @apply mb-2 block text-sm font-medium text-slate-300;
+  }
+
+  .form-field {
+    @apply w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-white transition placeholder:text-slate-500 focus:border-brand-400 focus:bg-brand-400/5 focus:outline-none;
+  }
+
+  .social-link {
+    @apply rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-300 via-brand-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(34, 205, 240, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 205, 240, 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  }
+
+  .bg-glow {
+    background: radial-gradient(circle, rgba(34, 205, 240, 0.35), transparent 65%);
+    filter: blur(40px);
+  }
+}
+
+/* Scroll reveal: only hide content when JS is running, so the page works without it. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,133 +1,119 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rupantorsoft - ভাবনাকে বাস্তবে রূপ দিন</title>
-  <meta name="description" content="Rupantorsoft — MVP, অ্যাপ ও ওয়েব ডেভেলপমেন্ট, প্রযুক্তিগত পরামর্শ এবং ওয়ার্কফ্লো অটোমেশন। আপনার ভাবনাকে প্রযুক্তিগত বাস্তবতায় রূপ দিন।" />
-  <meta name="theme-color" content="#060b18" />
-  <meta property="og:title" content="Rupantorsoft - ভাবনাকে বাস্তবে রূপ দিন" />
-  <meta property="og:description" content="আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।" />
-  <meta property="og:image" content="https://rupantorsoft.com/rupantorsoft_logo.png" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="rupantorsoft_logo.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rupantorsoft — ভাবনাকে বাস্তবে রূপ দিন</title>
+  <meta name="description" content="Rupantorsoft — MVP, অ্যাপ ও ওয়েব ডেভেলপমেন্ট, প্রযুক্তিগত পরামর্শ এবং ওয়ার্কফ্লো অটোমেশন। আপনার ভাবনাকে প্রযুক্তিগত বাস্তবতায় রূপ দিন।">
+  <meta name="theme-color" content="#060b18">
+  <link rel="canonical" href="https://rupantorsoft.com/">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rupantorsoft.com/">
+  <meta property="og:site_name" content="Rupantorsoft">
+  <meta property="og:title" content="Rupantorsoft — ভাবনাকে বাস্তবে রূপ দিন">
+  <meta property="og:description" content="আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।">
+  <meta property="og:image" content="https://rupantorsoft.com/rupantorsoft_logo.png">
+  <meta property="og:locale" content="bn_BD">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 
-  <!-- Pinned third-party scripts (update versions deliberately, never use @latest) -->
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://unpkg.com/lucide@1.60.0/dist/umd/lucide.min.js" defer></script>
+  <!-- Styles: built from src/styles.css with `npm run build` -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/main.js" defer></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Hind Siliguri"', 'system-ui', 'sans-serif'],
-            display: ['"Space Grotesk"', '"Hind Siliguri"', 'sans-serif'],
-          },
-          colors: {
-            ink: { 950: '#060b18', 900: '#0a1224', 800: '#111b33', 700: '#1b2847' },
-            brand: {
-              50: '#ecfcff', 100: '#cff7fe', 200: '#a5effc', 300: '#67e3f9',
-              400: '#22cdf0', 500: '#13b4d6', 600: '#0b8fb4', 700: '#0f7292',
-            },
-          },
-        },
-      },
-    };
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rupantorsoft",
+    "url": "https://rupantorsoft.com/",
+    "logo": "https://rupantorsoft.com/rupantorsoft_logo.png",
+    "sameAs": [
+      "https://facebook.com/RupantorSoft",
+      "https://linkedin.com/company/rupantorsoft",
+      "https://github.com/Rupantorsoft"
+    ]
+  }
   </script>
-
-  <style>
-    body { background: #060b18; }
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(34,205,240,.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34,205,240,.07) 1px, transparent 1px);
-      background-size: 48px 48px;
-      -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-              mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-    }
-    .glow { background: radial-gradient(circle, rgba(34,205,240,.35), transparent 65%); filter: blur(40px); }
-    .text-gradient {
-      background: linear-gradient(90deg, #67e3f9, #22cdf0 40%, #a78bfa);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08);
-      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(34,205,240,.45); box-shadow: 0 20px 40px -20px rgba(34,205,240,.35); }
-    .btn-primary {
-      background: #22cdf0; color: #060b18;
-      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
-      box-shadow: 0 0 0 0 rgba(34,205,240,.5);
-    }
-    .btn-primary:hover { background: #67e3f9; transform: translateY(-1px); box-shadow: 0 10px 30px -8px rgba(34,205,240,.6); }
-    .field {
-      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12);
-      transition: border-color .2s ease, background .2s ease;
-    }
-    .field:focus { outline: none; border-color: #22cdf0; background: rgba(34,205,240,.06); }
-    .field::placeholder { color: #64748b; }
-
-    /* Scroll reveal (replaces AOS) */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.is-visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .card, .btn-primary { transition: none; }
-    }
-  </style>
 </head>
 
-<body class="bg-ink-950 text-slate-300 font-sans antialiased selection:bg-brand-400 selection:text-ink-950">
+<body>
+  <!-- Icon sprite (interface icons: Lucide 1.60.0, ISC licence) -->
+  <svg xmlns="http://www.w3.org/2000/svg" hidden>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4M22 4h-4"/><circle cx="4" cy="20" r="2"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 0 0-2.474-1.561l-9 9A1.5 1.5 0 0 0 5.5 14h4.002a.5.5 0 0 1 .471.666L8.086 20a1.5 1.5 0 0 0 2.475 1.56l9-9A1.5 1.5 0 0 0 18.5 10h-3.997a.5.5 0 0 1-.472-.667z"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></symbol>
+    <symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1zM9 12l2 2 4-4"/></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11zM21.854 2.147l-10.94 10.939"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.33-.04-1.56-.14-2.86-.14C11.92 2 10 3.66 10 6.7v2.8H7v4h3V22h4z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></symbol>
+  </svg>
 
-  <!-- Header -->
-  <header id="top" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
-    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="প্রধান নেভিগেশন">
-      <a href="#home" class="flex items-center gap-3">
-        <img src="rupantorsoft_logo.png" alt="" class="h-10 w-10 object-cover object-top" width="40" height="40" />
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand-400 focus:px-4 focus:py-2 focus:font-semibold focus:text-ink-950">মূল অংশে যান</a>
+
+  <!-- ===== Header ===== -->
+  <header class="fixed inset-x-0 top-0 z-50 transition-colors duration-300" data-header>
+    <nav class="container-page flex items-center justify-between py-4" aria-label="প্রধান নেভিগেশন">
+      <a href="#home" class="flex items-center gap-3" aria-label="Rupantorsoft — হোম">
+        <img src="assets/img/logo-96.webp" alt="" width="40" height="40" class="h-10 w-10">
         <span class="font-display text-xl font-bold tracking-tight text-white">Rupantor<span class="text-brand-400">soft</span></span>
       </a>
 
       <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
-        <li><a href="#services" class="transition hover:text-brand-300">সেবাসমূহ</a></li>
-        <li><a href="#process" class="transition hover:text-brand-300">কাজের ধাপ</a></li>
-        <li><a href="#testimonials" class="transition hover:text-brand-300">ক্লায়েন্ট</a></li>
-        <li><a href="#contact-form" class="btn-primary rounded-full px-5 py-2.5 font-semibold">ফ্রি পরামর্শ নিন</a></li>
+        <li><a href="#services" class="nav-link">সেবাসমূহ</a></li>
+        <li><a href="#process" class="nav-link">কাজের ধাপ</a></li>
+        <li><a href="#testimonials" class="nav-link">ক্লায়েন্ট</a></li>
+        <li><a href="#contact" class="btn-primary px-5 py-2.5">ফ্রি পরামর্শ নিন</a></li>
       </ul>
 
-      <button id="menu-btn" type="button" class="rounded-lg p-2 text-white md:hidden" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="mobile-menu">
-        <i data-lucide="menu" class="h-6 w-6"></i>
+      <button type="button" class="rounded-lg p-2 text-white md:hidden" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <svg class="icon h-6 w-6" aria-hidden="true" data-icon-open><use href="#i-menu"/></svg>
+        <svg class="icon hidden h-6 w-6" aria-hidden="true" data-icon-close><use href="#i-x"/></svg>
       </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink-900/95 backdrop-blur-lg md:hidden">
-      <ul class="flex flex-col gap-1 px-5 py-4 text-base">
+    <div id="mobile-menu" class="border-t border-white/10 bg-ink-900/95 backdrop-blur-lg md:hidden" hidden>
+      <ul class="container-page flex flex-col gap-1 py-4 text-base">
         <li><a href="#services" class="block rounded-lg px-3 py-2 hover:bg-white/5">সেবাসমূহ</a></li>
         <li><a href="#process" class="block rounded-lg px-3 py-2 hover:bg-white/5">কাজের ধাপ</a></li>
         <li><a href="#testimonials" class="block rounded-lg px-3 py-2 hover:bg-white/5">ক্লায়েন্ট</a></li>
-        <li class="pt-2"><a href="#contact-form" class="btn-primary block rounded-full px-5 py-3 text-center font-semibold">ফ্রি পরামর্শ নিন</a></li>
+        <li class="pt-2"><a href="#contact" class="btn-primary w-full px-5 py-3">ফ্রি পরামর্শ নিন</a></li>
       </ul>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
+  <main id="main">
+    <!-- ===== Hero ===== -->
     <section id="home" class="relative overflow-hidden pb-24 pt-32 md:pb-32 md:pt-40">
-      <div class="grid-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
-      <div class="glow pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2" aria-hidden="true"></div>
+      <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="bg-glow pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2" aria-hidden="true"></div>
 
-      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.2fr_1fr]">
+      <div class="container-page relative grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
         <div class="text-center lg:text-left">
           <p class="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-400/10 px-4 py-1.5 text-sm font-medium text-brand-200">
-            <i data-lucide="sparkles" class="h-4 w-4"></i> আইডিয়া থেকে লঞ্চ — এক জায়গায়
+            <svg class="icon h-4 w-4" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            আইডিয়া থেকে লঞ্চ — এক জায়গায়
           </p>
           <h1 class="reveal text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
             ভাবনাকে <span class="text-gradient">প্রযুক্তিগত বাস্তবতায়</span> রূপ দিন
@@ -136,104 +122,104 @@
             Rupantorsoft আপনার ভাবনাকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
           </p>
           <div class="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
-            <a href="#contact-form" class="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-semibold">
-              আজই কথা বলুন <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            <a href="#contact" class="btn-primary px-7 py-3.5 text-lg">
+              আজই কথা বলুন
+              <svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-arrow-right"/></svg>
             </a>
-            <a href="#services" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-lg font-medium text-white transition hover:border-brand-400/60 hover:bg-white/5">
-              আমাদের সেবা দেখুন
-            </a>
+            <a href="#services" class="btn-ghost px-7 py-3.5 text-lg">আমাদের সেবা দেখুন</a>
           </div>
         </div>
 
-        <div class="reveal relative mx-auto w-full max-w-sm lg:max-w-none">
-          <div class="glow absolute inset-8" aria-hidden="true"></div>
-          <img src="rupantorsoft_logo.png" alt="Rupantorsoft লোগো" class="relative mx-auto w-full max-w-md drop-shadow-[0_0_40px_rgba(34,205,240,0.25)]" width="1563" height="1563" />
+        <div class="reveal relative mx-auto w-full max-w-sm lg:max-w-md">
+          <div class="bg-glow absolute inset-8" aria-hidden="true"></div>
+          <img src="assets/img/logo-720.webp" alt="Rupantorsoft লোগো" width="720" height="720" fetchpriority="high"
+               class="relative w-full drop-shadow-[0_0_40px_rgba(34,205,240,0.25)]">
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="relative border-t border-white/5 py-24">
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
-          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Services</p>
-          <h2 class="text-3xl font-bold text-white md:text-4xl">আমাদের সেবাসমূহ</h2>
-        </div>
+    <!-- ===== Services ===== -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container-page">
+        <header class="section-header reveal">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title" class="section-title">আমাদের সেবাসমূহ</h2>
+        </header>
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <article class="card reveal rounded-2xl p-7">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="zap" class="h-6 w-6"></i></div>
-            <h3 class="mb-2 text-xl font-semibold text-white">MVP ডেভেলপমেন্ট</h3>
-            <p class="leading-relaxed text-slate-400">দ্রুত ও কম খরচে আপনার ভাবনাকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
+          <article class="card reveal">
+            <div class="icon-badge"><svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-zap"/></svg></div>
+            <h3 class="card-title">MVP ডেভেলপমেন্ট</h3>
+            <p class="card-text">দ্রুত ও কম খরচে আপনার ভাবনাকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
           </article>
-          <article class="card reveal rounded-2xl p-7">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="smartphone" class="h-6 w-6"></i></div>
-            <h3 class="mb-2 text-xl font-semibold text-white">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
-            <p class="leading-relaxed text-slate-400">অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
+          <article class="card reveal">
+            <div class="icon-badge"><svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
+            <h3 class="card-title">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
+            <p class="card-text">অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
           </article>
-          <article class="card reveal rounded-2xl p-7">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="lightbulb" class="h-6 w-6"></i></div>
-            <h3 class="mb-2 text-xl font-semibold text-white">প্রযুক্তিগত পরামর্শ</h3>
-            <p class="leading-relaxed text-slate-400">আপনার ভাবনাকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
+          <article class="card reveal">
+            <div class="icon-badge"><svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-lightbulb"/></svg></div>
+            <h3 class="card-title">প্রযুক্তিগত পরামর্শ</h3>
+            <p class="card-text">আপনার ভাবনাকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
           </article>
-          <article class="card reveal rounded-2xl p-7">
-            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="workflow" class="h-6 w-6"></i></div>
-            <h3 class="mb-2 text-xl font-semibold text-white">ওয়ার্কফ্লো অটোমেশন</h3>
-            <p class="leading-relaxed text-slate-400">আপনার ম্যানুয়াল কাজগুলো স্বয়ংক্রিয় করুন, যা আপনার সময় এবং অর্থ সাশ্রয় করে।</p>
+          <article class="card reveal">
+            <div class="icon-badge"><svg class="icon h-6 w-6" aria-hidden="true"><use href="#i-workflow"/></svg></div>
+            <h3 class="card-title">ওয়ার্কফ্লো অটোমেশন</h3>
+            <p class="card-text">আপনার ম্যানুয়াল কাজগুলো স্বয়ংক্রিয় করুন, যা আপনার সময় এবং অর্থ সাশ্রয় করে।</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Process -->
-    <section id="process" class="relative border-t border-white/5 bg-ink-900 py-24">
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
-          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Process</p>
-          <h2 class="text-3xl font-bold text-white md:text-4xl">আমরা যেভাবে কাজ করি</h2>
-        </div>
+    <!-- ===== Process ===== -->
+    <section id="process" class="section bg-ink-900" aria-labelledby="process-title">
+      <div class="container-page">
+        <header class="section-header reveal">
+          <p class="eyebrow">Process</p>
+          <h2 id="process-title" class="section-title">আমরা যেভাবে কাজ করি</h2>
+        </header>
 
         <ol class="grid gap-6 md:grid-cols-3">
-          <li class="reveal relative rounded-2xl border border-white/10 p-7">
-            <span class="font-display text-5xl font-bold text-brand-400/30">01</span>
-            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">ভাবনা বোঝা</h3>
-            <p class="leading-relaxed text-slate-400">আপনার লক্ষ্য, ব্যবহারকারী ও প্রয়োজন নিয়ে বিস্তারিত আলোচনা করি।</p>
+          <li class="reveal rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30" aria-hidden="true">01</span>
+            <h3 class="card-title mt-3">ভাবনা বোঝা</h3>
+            <p class="card-text">আপনার লক্ষ্য, ব্যবহারকারী ও প্রয়োজন নিয়ে বিস্তারিত আলোচনা করি।</p>
           </li>
-          <li class="reveal relative rounded-2xl border border-white/10 p-7">
-            <span class="font-display text-5xl font-bold text-brand-400/30">02</span>
-            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">ডিজাইন ও পরিকল্পনা</h3>
-            <p class="leading-relaxed text-slate-400">স্পষ্ট রোডম্যাপ, সময়সীমা ও ডিজাইন তৈরি করি — যাতে কোনো চমক না থাকে।</p>
+          <li class="reveal rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30" aria-hidden="true">02</span>
+            <h3 class="card-title mt-3">ডিজাইন ও পরিকল্পনা</h3>
+            <p class="card-text">স্পষ্ট রোডম্যাপ, সময়সীমা ও ডিজাইন তৈরি করি — যাতে কোনো চমক না থাকে।</p>
           </li>
-          <li class="reveal relative rounded-2xl border border-white/10 p-7">
-            <span class="font-display text-5xl font-bold text-brand-400/30">03</span>
-            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">তৈরি ও লঞ্চ</h3>
-            <p class="leading-relaxed text-slate-400">ধাপে ধাপে ডেভেলপ করে, টেস্ট করে আপনার প্রোডাক্ট লঞ্চ করি।</p>
+          <li class="reveal rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30" aria-hidden="true">03</span>
+            <h3 class="card-title mt-3">তৈরি ও লঞ্চ</h3>
+            <p class="card-text">ধাপে ধাপে ডেভেলপ করে, টেস্ট করে আপনার প্রোডাক্ট লঞ্চ করি।</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="border-t border-white/5 py-24">
-      <div class="mx-auto max-w-6xl px-5">
-        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
-          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Testimonials</p>
-          <h2 class="text-3xl font-bold text-white md:text-4xl">আমাদের ক্লায়েন্টরা যা বলছেন</h2>
-        </div>
+    <!-- ===== Testimonials ===== -->
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+      <div class="container-page">
+        <header class="section-header reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2 id="testimonials-title" class="section-title">আমাদের ক্লায়েন্টরা যা বলছেন</h2>
+        </header>
 
         <div class="grid gap-6 md:grid-cols-3">
-          <figure class="card reveal flex flex-col rounded-2xl p-7">
-            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+          <figure class="card reveal flex flex-col">
+            <svg class="icon mb-4 h-8 w-8 text-brand-400/60" aria-hidden="true"><use href="#i-quote"/></svg>
             <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“Rupantorsoft আমাদের ভাবনাকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</blockquote>
             <figcaption class="mt-6 font-semibold text-brand-300">— Founder, Dhaka</figcaption>
           </figure>
-          <figure class="card reveal flex flex-col rounded-2xl p-7">
-            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+          <figure class="card reveal flex flex-col">
+            <svg class="icon mb-4 h-8 w-8 text-brand-400/60" aria-hidden="true"><use href="#i-quote"/></svg>
             <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“প্রফেশনাল, ফাস্ট, এবং সাশ্রয়ী সার্ভিস — Highly Recommended!”</blockquote>
             <figcaption class="mt-6 font-semibold text-brand-300">— CEO, Rajshahi</figcaption>
           </figure>
-          <figure class="card reveal flex flex-col rounded-2xl p-7">
-            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+          <figure class="card reveal flex flex-col">
+            <svg class="icon mb-4 h-8 w-8 text-brand-400/60" aria-hidden="true"><use href="#i-quote"/></svg>
             <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“তাদের MVP প্যাকেজ দিয়ে আমি আমার স্টার্টআপ শুরু করেছি!”</blockquote>
             <figcaption class="mt-6 font-semibold text-brand-300">— Entrepreneur, Khulna</figcaption>
           </figure>
@@ -241,133 +227,63 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact-form" class="relative overflow-hidden border-t border-white/5 bg-ink-900 py-24">
-      <div class="glow pointer-events-none absolute -bottom-40 -right-20 h-[480px] w-[480px]" aria-hidden="true"></div>
-      <div class="relative mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section overflow-hidden bg-ink-900" aria-labelledby="contact-title">
+      <div class="bg-glow pointer-events-none absolute -bottom-40 -right-20 h-[480px] w-[480px]" aria-hidden="true"></div>
+
+      <div class="container-page relative grid gap-12 lg:grid-cols-2">
         <div class="reveal">
-          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Contact</p>
-          <h2 class="text-3xl font-bold text-white md:text-4xl">আপনার ভাবনা নিয়ে আলোচনা শুরু হোক</h2>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title" class="section-title">আপনার ভাবনা নিয়ে আলোচনা শুরু হোক</h2>
           <p class="mt-5 max-w-md text-lg leading-relaxed text-slate-400">নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।</p>
-          <ul class="mt-8 space-y-4 text-slate-300">
-            <li class="flex items-center gap-3"><i data-lucide="clock" class="h-5 w-5 text-brand-400"></i> ২৪ ঘণ্টার মধ্যে উত্তর</li>
-            <li class="flex items-center gap-3"><i data-lucide="shield-check" class="h-5 w-5 text-brand-400"></i> প্রথম পরামর্শ সম্পূর্ণ ফ্রি</li>
-            <li class="flex items-center gap-3"><i data-lucide="circle-check" class="h-5 w-5 text-brand-400"></i> আপনার তথ্য গোপন রাখা হয়</li>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-center gap-3"><svg class="icon h-5 w-5 text-brand-400" aria-hidden="true"><use href="#i-clock"/></svg> ২৪ ঘণ্টার মধ্যে উত্তর</li>
+            <li class="flex items-center gap-3"><svg class="icon h-5 w-5 text-brand-400" aria-hidden="true"><use href="#i-shield-check"/></svg> প্রথম পরামর্শ সম্পূর্ণ ফ্রি</li>
+            <li class="flex items-center gap-3"><svg class="icon h-5 w-5 text-brand-400" aria-hidden="true"><use href="#i-circle-check"/></svg> আপনার তথ্য গোপন রাখা হয়</li>
           </ul>
         </div>
 
-        <form id="contact" action="https://formspree.io/f/xeopkvdp" method="POST" class="reveal rounded-2xl border border-white/10 bg-ink-950/60 p-7 backdrop-blur md:p-8">
+        <form action="https://formspree.io/f/xeopkvdp" method="POST" data-contact-form
+              class="reveal rounded-2xl border border-white/10 bg-ink-950/60 p-7 backdrop-blur md:p-8">
           <div class="mb-5">
-            <label for="name" class="mb-2 block text-sm font-medium text-slate-300">নাম</label>
-            <input id="name" name="name" autocomplete="name" required class="field w-full rounded-lg px-4 py-3 text-white" placeholder="আপনার নাম" />
+            <label for="name" class="form-label">নাম</label>
+            <input id="name" name="name" type="text" autocomplete="name" required class="form-field" placeholder="আপনার নাম">
           </div>
           <div class="mb-5">
-            <label for="email" class="mb-2 block text-sm font-medium text-slate-300">ইমেইল</label>
-            <input id="email" type="email" name="email" autocomplete="email" required class="field w-full rounded-lg px-4 py-3 text-white" placeholder="your@email.com" />
+            <label for="email" class="form-label">ইমেইল</label>
+            <input id="email" name="email" type="email" autocomplete="email" required class="form-field" placeholder="your@email.com">
           </div>
           <div class="mb-6">
-            <label for="message" class="mb-2 block text-sm font-medium text-slate-300">আপনার ভাবনা</label>
-            <textarea id="message" name="message" rows="5" required class="field w-full resize-y rounded-lg px-4 py-3 text-white" placeholder="আপনার প্রজেক্ট বা ভাবনার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
+            <label for="message" class="form-label">আপনার ভাবনা</label>
+            <textarea id="message" name="message" rows="5" required class="form-field resize-y" placeholder="আপনার প্রজেক্ট বা ভাবনার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
           </div>
-          <button type="submit" class="btn-primary inline-flex w-full items-center justify-center gap-2 rounded-lg py-3.5 text-lg font-semibold disabled:opacity-60">
-            <span>সাবমিট করুন</span> <i data-lucide="send" class="h-5 w-5"></i>
+          <!-- Formspree honeypot: bots fill this, people don't see it -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+          <button type="submit" class="btn-primary w-full rounded-lg py-3.5 text-lg">
+            সাবমিট করুন
+            <svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-send"/></svg>
           </button>
-          <p id="form-status" class="mt-4 hidden text-center text-sm" role="status" aria-live="polite"></p>
+          <p class="mt-4 text-center text-sm text-slate-400 data-[tone=error]:text-rose-400 data-[tone=success]:text-brand-300"
+             role="status" aria-live="polite" data-form-status hidden></p>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== Footer ===== -->
   <footer class="border-t border-white/5 py-12">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 md:flex-row">
+    <div class="container-page flex flex-col items-center justify-between gap-6 md:flex-row">
       <a href="#home" class="font-display text-xl font-bold text-white">Rupantor<span class="text-brand-400">soft</span></a>
-      <div class="flex items-center gap-3">
-        <a href="https://facebook.com/RupantorSoft" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.33-.04-1.56-.14-2.86-.14C11.92 2 10 3.66 10 6.7v2.8H7v4h3V22h4z"/></svg>
-        </a>
-        <a href="https://linkedin.com/company/rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
-        </a>
-        <a href="https://github.com/Rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-        </a>
-      </div>
-      <p class="text-sm text-slate-500">&copy; <span id="year">২০২৬</span> Rupantorsoft. সর্বস্বত্ব সংরক্ষিত।</p>
+
+      <ul class="flex items-center gap-3" aria-label="সোশ্যাল মিডিয়া">
+        <li><a href="https://facebook.com/RupantorSoft" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link block"><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://linkedin.com/company/rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link block"><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://github.com/Rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link block"><svg class="icon h-5 w-5" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+      </ul>
+
+      <p class="text-sm text-slate-500">&copy; <span data-year>২০২৬</span> Rupantorsoft. সর্বস্বত্ব সংরক্ষিত।</p>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.lucide) lucide.createIcons();
-
-      // Current year in Bengali digits
-      const bn = '০১২৩৪৫৬৭৮৯';
-      document.getElementById('year').textContent =
-        String(new Date().getFullYear()).replace(/\d/g, d => bn[d]);
-
-      // Header background on scroll
-      const header = document.getElementById('top');
-      const onScroll = () => {
-        const scrolled = window.scrollY > 10;
-        header.classList.toggle('bg-ink-950/80', scrolled);
-        header.classList.toggle('backdrop-blur-lg', scrolled);
-        header.classList.toggle('border-b', scrolled);
-        header.classList.toggle('border-white/10', scrolled);
-      };
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-
-      // Mobile menu
-      const btn = document.getElementById('menu-btn');
-      const menu = document.getElementById('mobile-menu');
-      const setMenu = (open) => {
-        menu.classList.toggle('hidden', !open);
-        btn.setAttribute('aria-expanded', String(open));
-        btn.setAttribute('aria-label', open ? 'মেনু বন্ধ করুন' : 'মেনু খুলুন');
-      };
-      btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
-      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-
-      // Scroll reveal
-      const items = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-          });
-        }, { threshold: 0.12 });
-        items.forEach((el, i) => { el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el); });
-      } else {
-        items.forEach(el => el.classList.add('is-visible'));
-      }
-
-      // Contact form: submit in place via Formspree, fall back to normal POST
-      const form = document.getElementById('contact');
-      const status = document.getElementById('form-status');
-      form.addEventListener('submit', async (ev) => {
-        if (!window.fetch) return;
-        ev.preventDefault();
-        const submit = form.querySelector('button[type="submit"]');
-        submit.disabled = true;
-        status.className = 'mt-4 text-center text-sm text-slate-400';
-        status.textContent = 'পাঠানো হচ্ছে...';
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' },
-          });
-          if (!res.ok) throw new Error(res.status);
-          form.reset();
-          status.className = 'mt-4 text-center text-sm text-brand-300';
-          status.textContent = 'ধন্যবাদ! আমরা ২৪ ঘণ্টার মধ্যে আপনার সাথে যোগাযোগ করব।';
-        } catch {
-          status.className = 'mt-4 text-center text-sm text-rose-400';
-          status.textContent = 'দুঃখিত, পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।';
-        } finally {
-          submit.disabled = false;
-        }
-      });
-    });
-  </script>
 </body>
 </html>
