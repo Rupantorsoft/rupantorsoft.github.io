@@ -1,0 +1,13 @@
+{
+  "name": "rupantorsoft-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Rupantorsoft marketing site, served by GitHub Pages at rupantorsoft.com",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --minify",
+    "dev": "tailwindcss -i ./src/styles.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
