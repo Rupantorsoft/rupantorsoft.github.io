@@ -4,196 +4,370 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rupantorsoft - ভাবনাকে বাস্তবে রূপ দিন</title>
+  <meta name="description" content="Rupantorsoft — MVP, অ্যাপ ও ওয়েব ডেভেলপমেন্ট, প্রযুক্তিগত পরামর্শ এবং ওয়ার্কফ্লো অটোমেশন। আপনার ভাবনাকে প্রযুক্তিগত বাস্তবতায় রূপ দিন।" />
+  <meta name="theme-color" content="#060b18" />
+  <meta property="og:title" content="Rupantorsoft - ভাবনাকে বাস্তবে রূপ দিন" />
+  <meta property="og:description" content="আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।" />
+  <meta property="og:image" content="https://rupantorsoft.com/rupantorsoft_logo.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="rupantorsoft_logo.png" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 
-  <style>
-    body {
-      font-family: "Noto Sans Bengali", sans-serif;
-    }
-    .animated-bg {
-      background: linear-gradient(-45deg, #e0f2fe, #dbeafe, #f3e8ff, #e0f7fa);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .glow-btn {
-      background: linear-gradient(90deg, #3b82f6, #2563eb, #1e40af);
-      background-size: 200% auto;
-      transition: 0.4s;
-      box-shadow: 0 0 15px rgba(37,99,235,0.4);
-    }
-    .glow-btn:hover {
-      background-position: right center;
-      box-shadow: 0 0 25px rgba(37,99,235,0.7);
-      transform: scale(1.05);
-    }
-  </style>
+  <!-- Pinned third-party scripts (update versions deliberately, never use @latest) -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@1.60.0/dist/umd/lucide.min.js" defer></script>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Noto Sans Bengali"', 'Inter', 'sans-serif'],
+            sans: ['"Hind Siliguri"', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Hind Siliguri"', 'sans-serif'],
           },
-          // আমি আপনার লোগোর রঙের সাথে মিলিয়ে একটি প্রাইমারি কালার যোগ করে দিচ্ছি
-          // এটি bg-primary-50, text-primary-600 ইত্যাদি ক্লাসে কাজ করবে
           colors: {
-            primary: {
-              '50': '#e0f2fe',
-              '100': '#bfe6fd',
-              '200': '#9bd8fc',
-              '300': '#78cafb',
-              '400': '#5abefa',
-              '500': '#3eb2f9', 
-              '600': '#0ea5e9', // আপনার লোগোর কাছাকাছি রঙ
-              '700': '#0284c7',
-              '800': '#0369a1',
-              '900': '#075985',
-            }
-          }
+            ink: { 950: '#060b18', 900: '#0a1224', 800: '#111b33', 700: '#1b2847' },
+            brand: {
+              50: '#ecfcff', 100: '#cff7fe', 200: '#a5effc', 300: '#67e3f9',
+              400: '#22cdf0', 500: '#13b4d6', 600: '#0b8fb4', 700: '#0f7292',
+            },
+          },
         },
       },
     };
   </script>
+
+  <style>
+    body { background: #060b18; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(34,205,240,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,205,240,.07) 1px, transparent 1px);
+      background-size: 48px 48px;
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+              mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+    .glow { background: radial-gradient(circle, rgba(34,205,240,.35), transparent 65%); filter: blur(40px); }
+    .text-gradient {
+      background: linear-gradient(90deg, #67e3f9, #22cdf0 40%, #a78bfa);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(34,205,240,.45); box-shadow: 0 20px 40px -20px rgba(34,205,240,.35); }
+    .btn-primary {
+      background: #22cdf0; color: #060b18;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 0 0 0 rgba(34,205,240,.5);
+    }
+    .btn-primary:hover { background: #67e3f9; transform: translateY(-1px); box-shadow: 0 10px 30px -8px rgba(34,205,240,.6); }
+    .field {
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12);
+      transition: border-color .2s ease, background .2s ease;
+    }
+    .field:focus { outline: none; border-color: #22cdf0; background: rgba(34,205,240,.06); }
+    .field::placeholder { color: #64748b; }
+
+    /* Scroll reveal (replaces AOS) */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .card, .btn-primary { transition: none; }
+    }
+  </style>
 </head>
 
-<body class="bg-white text-gray-800 antialiased">
+<body class="bg-ink-950 text-slate-300 font-sans antialiased selection:bg-brand-400 selection:text-ink-950">
 
-  <header class="bg-white/80 sticky top-0 z-50 backdrop-blur-lg shadow-md">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home" class="flex items-center space-x-2 text-gray-800 font-bold text-2xl">
-        <img src="rupantorsoft_logo.png" alt="RupantorSoft Logo" class="h-10 w-auto" />
-        <span>Rupantorsoft</span>
+  <!-- Header -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="প্রধান নেভিগেশন">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="rupantorsoft_logo.png" alt="" class="h-10 w-10 object-cover object-top" width="40" height="40" />
+        <span class="font-display text-xl font-bold tracking-tight text-white">Rupantor<span class="text-brand-400">soft</span></span>
       </a>
-      <a href="#contact-form"
-         class="glow-btn text-white px-5 py-2 rounded-full font-medium shadow-md">
-        ফ্রি পরামর্শ নিন
-      </a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="#services" class="transition hover:text-brand-300">সেবাসমূহ</a></li>
+        <li><a href="#process" class="transition hover:text-brand-300">কাজের ধাপ</a></li>
+        <li><a href="#testimonials" class="transition hover:text-brand-300">ক্লায়েন্ট</a></li>
+        <li><a href="#contact-form" class="btn-primary rounded-full px-5 py-2.5 font-semibold">ফ্রি পরামর্শ নিন</a></li>
+      </ul>
+
+      <button id="menu-btn" type="button" class="rounded-lg p-2 text-white md:hidden" aria-label="মেনু খুলুন" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
     </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink-900/95 backdrop-blur-lg md:hidden">
+      <ul class="flex flex-col gap-1 px-5 py-4 text-base">
+        <li><a href="#services" class="block rounded-lg px-3 py-2 hover:bg-white/5">সেবাসমূহ</a></li>
+        <li><a href="#process" class="block rounded-lg px-3 py-2 hover:bg-white/5">কাজের ধাপ</a></li>
+        <li><a href="#testimonials" class="block rounded-lg px-3 py-2 hover:bg-white/5">ক্লায়েন্ট</a></li>
+        <li class="pt-2"><a href="#contact-form" class="btn-primary block rounded-full px-5 py-3 text-center font-semibold">ফ্রি পরামর্শ নিন</a></li>
+      </ul>
+    </div>
   </header>
 
-  <section id="home" class="animated-bg text-center pt-24 pb-32 relative overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-        ভাবনাকে প্রযুক্তিগত বাস্তবতায় রূপ দিন 💡
-      </h1>
-      <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-        Rupantorsoft আপনার ভাবনাকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
-      </p>
-      <a href="#contact-form"
-         data-aos="zoom-in"
-         class="glow-btn inline-block text-white px-8 py-3 rounded-full font-semibold text-lg mt-4 shadow-lg">
-        আজই আপনার ভাবনা নিয়ে কথা বলুন 🚀
-      </a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden pb-24 pt-32 md:pb-32 md:pt-40">
+      <div class="grid-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="glow pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2" aria-hidden="true"></div>
 
-  <section id="services" class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-        আমাদের সেবাসমূহ
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div data-aos="fade-up" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-          <i data-lucide="zap" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">MVP ডেভেলপমেন্ট</h3>
-          <p>দ্রুত ও কম খরচে আপনার ভাবনাকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.2fr_1fr]">
+        <div class="text-center lg:text-left">
+          <p class="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-400/10 px-4 py-1.5 text-sm font-medium text-brand-200">
+            <i data-lucide="sparkles" class="h-4 w-4"></i> আইডিয়া থেকে লঞ্চ — এক জায়গায়
+          </p>
+          <h1 class="reveal text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
+            ভাবনাকে <span class="text-gradient">প্রযুক্তিগত বাস্তবতায়</span> রূপ দিন
+          </h1>
+          <p class="reveal mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-400 lg:mx-0">
+            Rupantorsoft আপনার ভাবনাকে বাস্তবে রূপ দিতে প্রস্তুত — আপনার ব্যবসা, স্টার্টআপ বা প্রজেক্টে আনুন প্রযুক্তির শক্তি।
+          </p>
+          <div class="reveal mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+            <a href="#contact-form" class="btn-primary inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-lg font-semibold">
+              আজই কথা বলুন <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <a href="#services" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-lg font-medium text-white transition hover:border-brand-400/60 hover:bg-white/5">
+              আমাদের সেবা দেখুন
+            </a>
+          </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="150" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-          <i data-lucide="smartphone" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
-          <p>অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-          <i data-lucide="lightbulb" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">প্রযুক্তিগত পরামর্শ</h3>
-          <p>আপনার ভাবনাকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="450" class="bg-primary-50 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-          <i data-lucide="workflow" class="w-10 h-10 mx-auto text-primary-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">ওয়ার্কফ্লো অটোমেশন</h3>
-          <p>আপনার ম্যানুয়াল কাজগুলো স্বয়ংক্রিয় করুন। যা আপনার সময় এবং অর্থ সাশ্রয় করে।</p>
+
+        <div class="reveal relative mx-auto w-full max-w-sm lg:max-w-none">
+          <div class="glow absolute inset-8" aria-hidden="true"></div>
+          <img src="rupantorsoft_logo.png" alt="Rupantorsoft লোগো" class="relative mx-auto w-full max-w-md drop-shadow-[0_0_40px_rgba(34,205,240,0.25)]" width="1563" height="1563" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="bg-primary-50 py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-        আমাদের ক্লায়েন্টরা যা বলছেন
-      </h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="zoom-in" class="bg-white p-8 rounded-2xl shadow-lg">
-          <p class="italic text-gray-700 mb-4">“Rupantorsoft আমাদের ভাবনাকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</p>
-          <h4 class="font-bold text-primary-700">— Founder, Dhaka</h4>
+    <!-- Services -->
+    <section id="services" class="relative border-t border-white/5 py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Services</p>
+          <h2 class="text-3xl font-bold text-white md:text-4xl">আমাদের সেবাসমূহ</h2>
         </div>
-        <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-8 rounded-2xl shadow-lg">
-          <p class="italic text-gray-700 mb-4">“প্রফেশনাল, ফাস্ট, এবং সাশ্রয়ী সার্ভিস — Highly Recommended!”</p>
-          <h4 class="font-bold text-primary-700">— CEO, Rajshahi</h4>
-        </div>
-        <div data-aos="zoom-in" data-aos-delay="300" class="bg-white p-8 rounded-2xl shadow-lg">
-          <p class="italic text-gray-700 mb-4">“তাদের MVP প্যাকেজ দিয়ে আমি আমার স্টার্টআপ শুরু করেছি!”</p>
-          <h4 class="font-bold text-primary-700">— Entrepreneur, Khulna</h4>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card reveal rounded-2xl p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="zap" class="h-6 w-6"></i></div>
+            <h3 class="mb-2 text-xl font-semibold text-white">MVP ডেভেলপমেন্ট</h3>
+            <p class="leading-relaxed text-slate-400">দ্রুত ও কম খরচে আপনার ভাবনাকে কার্যকর প্রোটোটাইপে রূপ দিন।</p>
+          </article>
+          <article class="card reveal rounded-2xl p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="smartphone" class="h-6 w-6"></i></div>
+            <h3 class="mb-2 text-xl font-semibold text-white">অ্যাপ ও ওয়েব ডেভেলপমেন্ট</h3>
+            <p class="leading-relaxed text-slate-400">অ্যান্ড্রয়েড, iOS ও ওয়েব প্ল্যাটফর্মে কাস্টম অ্যাপ তৈরি করি।</p>
+          </article>
+          <article class="card reveal rounded-2xl p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="lightbulb" class="h-6 w-6"></i></div>
+            <h3 class="mb-2 text-xl font-semibold text-white">প্রযুক্তিগত পরামর্শ</h3>
+            <p class="leading-relaxed text-slate-400">আপনার ভাবনাকে সফল করতে টেকনিক্যাল রোডম্যাপ তৈরি করি।</p>
+          </article>
+          <article class="card reveal rounded-2xl p-7">
+            <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-400/10 text-brand-300"><i data-lucide="workflow" class="h-6 w-6"></i></div>
+            <h3 class="mb-2 text-xl font-semibold text-white">ওয়ার্কফ্লো অটোমেশন</h3>
+            <p class="leading-relaxed text-slate-400">আপনার ম্যানুয়াল কাজগুলো স্বয়ংক্রিয় করুন, যা আপনার সময় এবং অর্থ সাশ্রয় করে।</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact-form" class="py-20 animated-bg">
-    <div class="container mx-auto px-6 text-center">
-      <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-        আপনার ভাবনা নিয়ে আলোচনা শুরু হোক 🚀
-      </h2>
-      <p data-aos="fade-up" data-aos-delay="150" class="text-gray-700 mb-10 max-w-2xl mx-auto">
-        নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।
-      </p>
+    <!-- Process -->
+    <section id="process" class="relative border-t border-white/5 bg-ink-900 py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Process</p>
+          <h2 class="text-3xl font-bold text-white md:text-4xl">আমরা যেভাবে কাজ করি</h2>
+        </div>
 
-      <form action="https://formspree.io/f/xeopkvdp" method="POST"
-            data-aos="zoom-in"
-            class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg text-left">
-        <label class="block mb-4">
-          <span class="text-gray-700">নাম:</span>
-          <input name="name" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার নাম">
-        </label>
-        <label class="block mb-4">
-          <span class="text-gray-700">ইমেইল:</span>
-          <input type="email" name="email" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="your@email.com">
-        </label>
-        <label class="block mb-6">
-          <span class="text-gray-700">আপনার ভাবনা:</span>
-          <textarea name="message" rows="4" required class="mt-1 w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500" placeholder="আপনার প্রজেক্ট বা ভাবনার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
-        </label>
-        <button type="submit" class="glow-btn w-full text-white font-semibold py-3 rounded-lg">
-          সাবমিট করুন ✉️
-        </button>
-      </form>
-    </div>
-  </section>
+        <ol class="grid gap-6 md:grid-cols-3">
+          <li class="reveal relative rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30">01</span>
+            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">ভাবনা বোঝা</h3>
+            <p class="leading-relaxed text-slate-400">আপনার লক্ষ্য, ব্যবহারকারী ও প্রয়োজন নিয়ে বিস্তারিত আলোচনা করি।</p>
+          </li>
+          <li class="reveal relative rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30">02</span>
+            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">ডিজাইন ও পরিকল্পনা</h3>
+            <p class="leading-relaxed text-slate-400">স্পষ্ট রোডম্যাপ, সময়সীমা ও ডিজাইন তৈরি করি — যাতে কোনো চমক না থাকে।</p>
+          </li>
+          <li class="reveal relative rounded-2xl border border-white/10 p-7">
+            <span class="font-display text-5xl font-bold text-brand-400/30">03</span>
+            <h3 class="mb-2 mt-3 text-xl font-semibold text-white">তৈরি ও লঞ্চ</h3>
+            <p class="leading-relaxed text-slate-400">ধাপে ধাপে ডেভেলপ করে, টেস্ট করে আপনার প্রোডাক্ট লঞ্চ করি।</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-  <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-    <h3 class="text-2xl font-bold text-white mb-6">Rupantorsoft</h3>
-    <div class="flex justify-center space-x-6 mb-6">
-      <a href="https://facebook.com/RupantorSoft" target="_blank" class="hover:text-primary-500"><i data-lucide="facebook" class="w-6 h-6"></i></a>
-      <a href="https://linkedin.com/company/rupantorsoft" target="_blank" class="hover:text-primary-500"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-      <a href="https://github.com/Rupantorsoft" target="_blank" class="hover:text-primary-500"><i data-lucide="github" class="w-6 h-6"></i></a>
+    <!-- Testimonials -->
+    <section id="testimonials" class="border-t border-white/5 py-24">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Testimonials</p>
+          <h2 class="text-3xl font-bold text-white md:text-4xl">আমাদের ক্লায়েন্টরা যা বলছেন</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <figure class="card reveal flex flex-col rounded-2xl p-7">
+            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+            <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“Rupantorsoft আমাদের ভাবনাকে মাত্র ৪ সপ্তাহে বাস্তবে রূপ দিয়েছে!”</blockquote>
+            <figcaption class="mt-6 font-semibold text-brand-300">— Founder, Dhaka</figcaption>
+          </figure>
+          <figure class="card reveal flex flex-col rounded-2xl p-7">
+            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+            <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“প্রফেশনাল, ফাস্ট, এবং সাশ্রয়ী সার্ভিস — Highly Recommended!”</blockquote>
+            <figcaption class="mt-6 font-semibold text-brand-300">— CEO, Rajshahi</figcaption>
+          </figure>
+          <figure class="card reveal flex flex-col rounded-2xl p-7">
+            <i data-lucide="quote" class="mb-4 h-8 w-8 text-brand-400/60"></i>
+            <blockquote class="flex-1 text-lg leading-relaxed text-slate-200">“তাদের MVP প্যাকেজ দিয়ে আমি আমার স্টার্টআপ শুরু করেছি!”</blockquote>
+            <figcaption class="mt-6 font-semibold text-brand-300">— Entrepreneur, Khulna</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact-form" class="relative overflow-hidden border-t border-white/5 bg-ink-900 py-24">
+      <div class="glow pointer-events-none absolute -bottom-40 -right-20 h-[480px] w-[480px]" aria-hidden="true"></div>
+      <div class="relative mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="mb-3 font-display text-sm font-bold uppercase tracking-[0.2em] text-brand-400">Contact</p>
+          <h2 class="text-3xl font-bold text-white md:text-4xl">আপনার ভাবনা নিয়ে আলোচনা শুরু হোক</h2>
+          <p class="mt-5 max-w-md text-lg leading-relaxed text-slate-400">নিচের ফর্মটি পূরণ করুন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।</p>
+          <ul class="mt-8 space-y-4 text-slate-300">
+            <li class="flex items-center gap-3"><i data-lucide="clock" class="h-5 w-5 text-brand-400"></i> ২৪ ঘণ্টার মধ্যে উত্তর</li>
+            <li class="flex items-center gap-3"><i data-lucide="shield-check" class="h-5 w-5 text-brand-400"></i> প্রথম পরামর্শ সম্পূর্ণ ফ্রি</li>
+            <li class="flex items-center gap-3"><i data-lucide="circle-check" class="h-5 w-5 text-brand-400"></i> আপনার তথ্য গোপন রাখা হয়</li>
+          </ul>
+        </div>
+
+        <form id="contact" action="https://formspree.io/f/xeopkvdp" method="POST" class="reveal rounded-2xl border border-white/10 bg-ink-950/60 p-7 backdrop-blur md:p-8">
+          <div class="mb-5">
+            <label for="name" class="mb-2 block text-sm font-medium text-slate-300">নাম</label>
+            <input id="name" name="name" autocomplete="name" required class="field w-full rounded-lg px-4 py-3 text-white" placeholder="আপনার নাম" />
+          </div>
+          <div class="mb-5">
+            <label for="email" class="mb-2 block text-sm font-medium text-slate-300">ইমেইল</label>
+            <input id="email" type="email" name="email" autocomplete="email" required class="field w-full rounded-lg px-4 py-3 text-white" placeholder="your@email.com" />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="mb-2 block text-sm font-medium text-slate-300">আপনার ভাবনা</label>
+            <textarea id="message" name="message" rows="5" required class="field w-full resize-y rounded-lg px-4 py-3 text-white" placeholder="আপনার প্রজেক্ট বা ভাবনার সংক্ষিপ্ত বিবরণ দিন..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary inline-flex w-full items-center justify-center gap-2 rounded-lg py-3.5 text-lg font-semibold disabled:opacity-60">
+            <span>সাবমিট করুন</span> <i data-lucide="send" class="h-5 w-5"></i>
+          </button>
+          <p id="form-status" class="mt-4 hidden text-center text-sm" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-12">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 md:flex-row">
+      <a href="#home" class="font-display text-xl font-bold text-white">Rupantor<span class="text-brand-400">soft</span></a>
+      <div class="flex items-center gap-3">
+        <a href="https://facebook.com/RupantorSoft" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.33-.04-1.56-.14-2.86-.14C11.92 2 10 3.66 10 6.7v2.8H7v4h3V22h4z"/></svg>
+        </a>
+        <a href="https://linkedin.com/company/rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
+        </a>
+        <a href="https://github.com/Rupantorsoft" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="rounded-full border border-white/10 p-2.5 text-slate-400 transition hover:border-brand-400/60 hover:text-brand-300">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+        </a>
+      </div>
+      <p class="text-sm text-slate-500">&copy; <span id="year">২০২৬</span> Rupantorsoft. সর্বস্বত্ব সংরক্ষিত।</p>
     </div>
-    <p class="text-sm">&copy; ২০২৫ Rupantorsoft. সর্বস্বত্ব সংরক্ষিত।</p>
   </footer>
 
   <script>
-    AOS.init({ duration: 1000, once: true });
-    lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+
+      // Current year in Bengali digits
+      const bn = '০১২৩৪৫৬৭৮৯';
+      document.getElementById('year').textContent =
+        String(new Date().getFullYear()).replace(/\d/g, d => bn[d]);
+
+      // Header background on scroll
+      const header = document.getElementById('top');
+      const onScroll = () => {
+        const scrolled = window.scrollY > 10;
+        header.classList.toggle('bg-ink-950/80', scrolled);
+        header.classList.toggle('backdrop-blur-lg', scrolled);
+        header.classList.toggle('border-b', scrolled);
+        header.classList.toggle('border-white/10', scrolled);
+      };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Mobile menu
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const setMenu = (open) => {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        btn.setAttribute('aria-label', open ? 'মেনু বন্ধ করুন' : 'মেনু খুলুন');
+      };
+      btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+      // Scroll reveal
+      const items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        items.forEach((el, i) => { el.style.transitionDelay = (i % 4) * 80 + 'ms'; io.observe(el); });
+      } else {
+        items.forEach(el => el.classList.add('is-visible'));
+      }
+
+      // Contact form: submit in place via Formspree, fall back to normal POST
+      const form = document.getElementById('contact');
+      const status = document.getElementById('form-status');
+      form.addEventListener('submit', async (ev) => {
+        if (!window.fetch) return;
+        ev.preventDefault();
+        const submit = form.querySelector('button[type="submit"]');
+        submit.disabled = true;
+        status.className = 'mt-4 text-center text-sm text-slate-400';
+        status.textContent = 'পাঠানো হচ্ছে...';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' },
+          });
+          if (!res.ok) throw new Error(res.status);
+          form.reset();
+          status.className = 'mt-4 text-center text-sm text-brand-300';
+          status.textContent = 'ধন্যবাদ! আমরা ২৪ ঘণ্টার মধ্যে আপনার সাথে যোগাযোগ করব।';
+        } catch {
+          status.className = 'mt-4 text-center text-sm text-rose-400';
+          status.textContent = 'দুঃখিত, পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।';
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    });
   </script>
 </body>
 </html>
